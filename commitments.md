@@ -38,4 +38,4 @@ Sanjin Đumišić.
 
 Underskrifter av samtliga gruppmedlemmar
 
-Hedi Gardi, Sanjin Đumišić, 
+Hedi Gardi, Sanjin Đumišić, Rasmus Wersäll
