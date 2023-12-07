@@ -23,3 +23,4 @@ Vem är scrum master?
 Sanjin Đumišić.
 
 Underskrifter av samtliga gruppmedlemmar
+Hedi Gardi
