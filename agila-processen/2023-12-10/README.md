@@ -1,41 +1,8 @@
-# Datum: 2023-12-10
+Datum: 2023-12-10
+Namn: Rasmus Wersäll
 
-## Namn: Janne Josefsson
+Idag har jag haft ett första möte med gruppen och kollat igenom krav specen. Vi har skapat ett project board och brytit ner kraven i mindre delar för den första sprinten.
 
-**Idag har jag** undersökt skattebrott.
+Ett problem jag har är att komma ihåg alla kommandon i terminalen för att påbörja ett repo lokalt.
 
-**Ett problem jag har** är att jag inte får tag på min källa längre.
-
-**Jag behöver hjälp med** att leta pressklipp på biblioteket från 2014 om skattebrottslingen.
-
-**Idag har jag lärt mig** att äta kanelbullar.
-
-## Namn: Axel Gordh Humlesjö
-
-**Idag har jag** deltagit i en intervju i Sveriges Radio om senaste avsnittet av Uppdrag Granskning.
-
-**Ett problem jag har** är att intervjuaren i Studio P1 inte förstod vad jag sa, så det blev inte så bra press. Men "there's no such thing as bad press."
-
-**Jag behöver hjälp med** att skriva manus till nästa avsnitt.
-
-**Idag har jag lärt mig** att beställa FUP.
-
-## Namn: Axel Gordh Humlesjö
-
-**Idag har jag** deltagit i en intervju i Sveriges Radio om senaste avsnittet av Uppdrag Granskning.
-
-**Ett problem jag har** är att intervjuaren i Studio P1 inte förstod vad jag sa, så det blev inte så bra press. Men "there's no such thing as bad press."
-
-**Jag behöver hjälp med** att skriva manus till nästa avsnitt.
-
-**Idag har jag lärt mig** att beställa FUP.
-
-## Namn: Axel Gordh Humlesjö
-
-**Idag har jag** deltagit i en intervju i Sveriges Radio om senaste avsnittet av Uppdrag Granskning.
-
-**Ett problem jag har** är att intervjuaren i Studio P1 inte förstod vad jag sa, så det blev inte så bra press. Men "there's no such thing as bad press."
-
-**Jag behöver hjälp med** att skriva manus till nästa avsnitt.
-
-**Idag har jag lärt mig** att beställa FUP.
+Idag har jag lärt mig mer om att sätta poäng på uppgifter inför första sprinten.
