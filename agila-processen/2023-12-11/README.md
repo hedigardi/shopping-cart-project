@@ -2,11 +2,13 @@
 
 ## Namn: Rasmus Wersäll
 
-Idag har jag haft ett första möte med gruppen och kollat igenom krav specen. Vi har skapat ett project board och brytit ner kraven i mindre delar för den första sprinten.
+**Idag har jag** genomfört två issues från vårt project board och mergat det med development branch och sedan till main.
 
-Ett problem jag har är att komma ihåg alla kommandon i terminalen för att påbörja ett repo lokalt.
+**Ett problem jag har** är att development branch inte gick att få upp i VSC, så vi mergade den med main för att kunna se resultatet.
 
-Idag har jag lärt mig mer om att sätta poäng på uppgifter inför första sprinten.
+**Jag behöver hjälp med** hur vi i gruppen snabbt kan bli mer samsynta utan att det ska bli allt för långa möten.
+
+**Idag har jag lärt mig** om hur man kan konfigurerar settings.json och att det är viktigt att alla i gruppen i viss utssträckning har samma inställnignar.
 
 ## Namn: Sanjin Đumišić
 
