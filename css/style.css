@@ -36,17 +36,20 @@ textarea {
 }
 
 main {
-  background-color: red;
+  background-color: beige;
+  margin: 2rem 0;
 }
 
 .products {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .bakery-product {
   position: relative;
-  flex-basis: calc(50% - 10px);
+  flex-basis: 100%;
   margin-bottom: 20px;
 }
 
