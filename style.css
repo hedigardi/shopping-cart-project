@@ -16,7 +16,8 @@
   Remove list styles (bullets/numbers)
   in case you use it with normalize.css
 */
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -41,4 +42,6 @@ main {
 
 footer {
   background-color: blue;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
