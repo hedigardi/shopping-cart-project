@@ -1,0 +1,64 @@
+<html>
+    <section class="info-container">
+        <fieldset class="order-container">
+          <legend>BESTÄLLNINGSFORMULÄR</legend>
+          <section>
+            <form id="formList">
+              <label for="firstname">Förnamn:</label>
+              <input type="text" name="firstname" id="fnamn"><br>
+              <label for="lastname">Efternamn:</label>
+              <input type="text" name="lastname" id="enamn"><br>
+              <label for="address">Adress:</label>
+              <input type="text" name="address" id="adress"><br>
+              <label for="zipcode">Postnummer:</label>
+              <input type="number" name="zipcode" id="pnummer"><br>
+              <label for="city">Postort:</label>
+              <input type="text" name="city" id="port"><br>
+              <label for="portnumber">ev. Portkod:</label>
+              <input type="number" name="portnumber" id="pkod"><br>
+              <label for="phone">Telefonnummer:</label>
+              <input type="number" name="phone" id="telefon"><br>
+              <label for="email">E-mail:</label>
+              <input type="email" name="email" id="email"><br><br>
+            </form>
+          </section>
+          <br><br>
+          <label for="card-radio">
+            <input
+              type="radio"
+              name="payment_method"
+              value="card"
+              class="payment"
+              id="card-radio"
+            >
+            Kort
+          </label>
+          <label for="invoice-radio">
+            <input
+              type="radio"
+              name="payment_method"
+              value="invoice"
+              class="payment"
+              id="invoice-radio"
+            >
+            Faktura
+          </label>
+          <div class="radio-content"></div> 
+          <input type="checkbox" id="approval" name="approval">
+          <label for="approval"
+            >Godkännande av behandling av personuppgifter</label
+          ><br>
+          <input
+            type="checkbox"
+            id="newsletter"
+            name="newsletter"
+            checked
+          >
+          <label for="newsletter">Nyhetsbrev</label><br><br>
+          <!--Rensa formuläret när du klickar på knappen -->
+          <input type="button" onclick="resetInput()" value="Ta bort allt">
+          <!--Bekräftar beställning när du klickar på knappen -->
+          <input type="submit" value="submit" id="submit">
+        </fieldset>
+      </section>
+</html>
