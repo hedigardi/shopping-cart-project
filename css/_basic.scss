@@ -1,3 +1,31 @@
 main{
   background-color: red;
 }
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bakery-product {
+  position: relative;
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
