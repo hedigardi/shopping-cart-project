@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'order';
+
 main{
-  background-color: red;
+  background-color: $red;
 }
