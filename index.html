@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mormor Dagnys Bageri</title>
-  <link href="/css/style.min.css" rel="stylesheet">
-</head>
-
-<body>
-  <header>Test</header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mormor Dagnys Bageri</title>
+    <link href="/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="name">Mormor Dagnys Bageri</h1>
+      </div>
+      <div class="navigation">
+        <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation-button">
+          <span class="navigation-icon">&nbsp;</span>
+        </label>
+        <div class="navigation-background">&nbsp;</div>
+        <nav class="navigation-nav">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Hem</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Om oss</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Produkter</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
   <main>
-
     <div class="products">
       <div class="bakery-product">
         <div class="img-overlay">Bread</div>
@@ -51,12 +76,10 @@
         <img src="img/wedding-cake.jpg" alt="Delicious wedding cake." class="product-image" height="1024" width="1024">
         <div class="cart-overlay">Add to Cart</div>
       </div>
-
     </div>
 
-  </main>
-  <footer>Test</footer>
-  <script src="/js/app.js"></script>
-</body>
-
+     </main>
+    <footer>Test</footer>
+    <script src="/js/app.js"></script>
+  </body>
 </html>
