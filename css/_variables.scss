@@ -1,0 +1,15 @@
+
+// google font
+$font-primary: 'Roboto', sans-serif;   
+
+
+// primary colors
+$yellow: #f4cf71  ; 
+$green:  rgb(14, 163, 63) ;  
+$red:    #e21f1f ; 
+$white:  #ffffff  ;  
+  
+
+@function rem($size) {
+    @return calc($size / 16) * 1rem;
+ } 

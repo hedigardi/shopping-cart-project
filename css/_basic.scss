@@ -1,7 +1,14 @@
+
+a:hover{
+  cursor: pointer;
+}
+
+@import 'variables';
+@import 'order';
+
 main{
   background-color: beige;
   margin: 2rem 0;
-
 }
 
 .products {
