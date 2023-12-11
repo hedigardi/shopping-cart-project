@@ -10,13 +10,14 @@ Idag har jag lärt mig mer om att sätta poäng på uppgifter inför första spr
 
 ## Namn: Sanjin Đumišić
 
-Jag hade idag ett första möte med gruppen för att lägga upp den första veckan av projektet.
+Idag gjorde vi branch merging samt testade att skapa en dev-branch för att i fortsättningen arbeta med den innan vi mergar in all i main.
 
-Inga större problem, men jag önskar att jag kunde Git och javascript nu på en gång 100% =))
+Problemen idag jag hade var relaterade till SASS och VSC där lite strul i synkade settings förhalade mitt kodande.
 
-Jag behöver strukturera upp mina Git-rutiner efter någon veckas frånvaro och fokuse på javascript.
+Nu vill jag lära mig mer om att arbeta med en dev-branch och en clone-main och själva den processen att få ihop allt innan main-merge. Därigenom
+också slippa kvadda main =))
 
-Idag har jag börböjat fundera på på hur 'cart' och 'checkout' kan funka ihop med HTML.
+Idag har  jag insett vikten att vid uppstart alla har synkade settings, extension och fudnerade på hur stora projekt gör allt detta.
 
 ## Namn: Hedi Gardi
 
