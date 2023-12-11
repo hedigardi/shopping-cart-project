@@ -1,10 +1,14 @@
+
+a:hover{
+  cursor: pointer;
+}
+
 @import 'variables';
 @import 'order';
 
- 
+main{
   background-color: beige;
   margin: 2rem 0;
-
 }
 
 .products {
@@ -48,4 +52,3 @@ text-align: center;
   color: #000;
   text-align: center;
 }
- 
