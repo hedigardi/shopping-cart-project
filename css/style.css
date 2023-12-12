@@ -35,13 +35,101 @@ textarea {
   white-space: revert;
 }
 
+.cart-container {
+  background-color: #817c7c;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0%;
+  transform: translate(5%, 10%);
+  width: auto;
+  box-shadow: 5px 5px 28px 2px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 5px 5px 28px 2px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 5px 5px 28px 2px rgba(0, 0, 0, 0.36);
+}
+.cart-container .accordion-item {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgb(126, 167, 145);
+  color: #000;
+  width: auto;
+}
+
+form input {
+  border-radius: 3px;
+  width: 12em;
+  background-color: #ffffff;
+}
+
+.accordion-title {
+  cursor: pointer;
+  color: #1b1b1b;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.accordion-content {
+  font-weight: bolder;
+  font-size: 10px;
+  display: flex;
+}
+
+fieldset {
+  margin-top: 2rem;
+  width: 50%;
+  font-size: 1rem;
+}
+fieldset .button-style {
+  margin-top: 1rem;
+  background-color: #7b1a1a;
+  border-radius: 0.3rem;
+  width: 6em;
+  padding: 0.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.form-footer {
+  margin-top: 2rem;
+}
+.form-footer .form-button {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.form-footer input#newsletter {
+  width: 1em;
+}
+.form-footer .payment {
+  width: 1em;
+}
+.form-footer input#approval {
+  width: 1em;
+  background-color: #ffffff;
+}
+
+.button-style.submit {
+  background-color: rgb(21, 138, 62);
+}
+
+.order-container {
+  margin-left: 10vw;
+}
+
 a:hover {
   cursor: pointer;
 }
 
-main {
+html, main {
   background-color: beige;
   margin: 2rem 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .products {
@@ -307,5 +395,8 @@ footer .bottom-left-footer h2 {
     position: relative;
     flex-basis: calc(50% - 10px);
     margin-bottom: 20px;
+  }
+  form input {
+    width: 20em;
   }
 }

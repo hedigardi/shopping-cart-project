@@ -27,3 +27,10 @@ Idag har jag börböjat fundera på på hur 'cart' och 'checkout' kan funka ihop
 **Jag behöver hjälp med** att kunna förstå hur man kopplar JavaScript med HTML sedan i själva verket.
 
 **Idag har jag lärt mig** hur man ska tänka agilt och sätta storypoints "SP" på uppgifter för att kunna bryta ner dom.
+
+
+## Namn: Nataliya Lisjö
+**Idag har jag**  första möte med gruppen , gick genom uppgiften , bestämde vilken problem ska lössa.
+**Ett problem jag har** att koppla git till repo
+**Jag behöver hjälp med** att koppla git till repo
+**Idag har jag lärt mig** hur man  bryter ner kravspecifikationen 
