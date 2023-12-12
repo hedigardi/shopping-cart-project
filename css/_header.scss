@@ -24,6 +24,15 @@ html {
     height: 100vh;
 }
 
+.shopping-cart {
+    position: fixed;
+    top: 50px;
+    color: $color-primary;
+    background-color: $color-primary-light;
+    padding: 20px;
+    z-index: 2;
+}
+
 .name {
     color: $color-primary;
     background-color: $color-primary-light;
