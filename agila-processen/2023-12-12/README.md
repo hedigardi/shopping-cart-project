@@ -1,4 +1,4 @@
-# Datum: 2023-12-11
+# Datum: 2023-12-12
 
 ## Namn: Rasmus Wersäll
 
@@ -12,14 +12,13 @@
 
 ## Namn: Sanjin Đumišić
 
-Idag gjorde vi branch merging samt testade att skapa en dev-branch för att i fortsättningen arbeta med den innan vi mergar in all i main.
+**Idag har jag** tillsammans med gruppen merge:at våra dev-branscher in till main.
 
-Problemen idag jag hade var relaterade till SASS och VSC där lite strul i synkade settings förhalade mitt kodande.
+**Ett problem jag har** är att olika settings i VS ställde till med CSS länkningen i början.
 
-Nu vill jag lära mig mer om att arbeta med en dev-branch och en clone-main och själva den processen att få ihop allt innan main-merge. Därigenom
-också slippa kvadda main =))
+**Jag behöver hjälp med** att förstå hur man ska tänka kring merge av branscher. Det är fortfarande inte har 100% koll på hur man ska tänka med branscher när man merge:a sin bransch till main. Om man behöver hämta hem allt från main till sin bransch innan man merge:ar sin bransch till main.
 
-Idag har  jag insett vikten att vid uppstart alla har synkade settings, extension och fudnerade på hur stora projekt gör allt detta.
+**Idag har jag lärt mig** att det är viktigt att ha samma settings i VS för att minimera risken att saker och ting blir annourlunda.
 
 ## Namn: Hedi Gardi
 
@@ -31,8 +30,12 @@ Idag har  jag insett vikten att vid uppstart alla har synkade settings, extensio
 
 **Idag har jag lärt mig** att det är viktigt att ha samma settings i VS för att minimera risken att saker och ting blir annourlunda.
 
-## Namn: Nataliya Lisjö
-**Idag har jag** skapade json, sass compressed watching,  
-**Ett problem jag har**  med separat  filen  order.html ser inte css ???
-**Jag behöver hjälp med** :  order.html , git in VSC panel 'sourse control'
-**Idag har jag lärt mig** git /merge genom terminalen i VSC
+## Namn:
+
+**Idag har jag**
+
+**Ett problem jag har**
+
+**Jag behöver hjälp med**
+
+**Idag har jag lärt mig**
