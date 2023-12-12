@@ -197,6 +197,15 @@ html {
   height: 100vh;
 }
 
+.shopping-cart {
+  position: fixed;
+  top: 50px;
+  color: #ce7828;
+  background-color: #f7cc7c;
+  padding: 20px;
+  z-index: 2;
+}
+
 .name {
   color: #ce7828;
   background-color: #f7cc7c;
