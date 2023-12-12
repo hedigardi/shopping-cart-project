@@ -1,13 +1,14 @@
+@import './variables';
+@import './form';
+
 a:hover{
   cursor: pointer;
 }
 
-@import 'variables';
-@import 'order';
-
-main{
+html, main{
   background-color: beige;
   margin: 2rem 0;
+  font-family: $font-primary ;
 }
 
 .products {

@@ -1,0 +1,89 @@
+// FORMULAR 
+ 
+.cart-container { 
+  background-color: #817c7c;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0%;   
+  transform: translate(5%, 10%);
+  width: auto;
+  box-shadow: 5px 5px 28px 2px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 5px 5px 28px 2px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 5px 5px 28px 2px rgba(0, 0, 0, 0.36);
+  .accordion-item { 
+    margin :  1rem; 
+    padding: 1rem; 
+    background-color: rgb(126, 167, 145);
+    color: #000;
+    width: auto;
+  }
+}
+form input { 
+  border-radius:  3px;
+  width: 12em;  
+  background-color: $white;
+ 
+}
+
+
+.accordion-title {    
+  cursor: pointer;
+  color: #1b1b1b;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.accordion-content {
+  font-weight: bolder;
+  font-size: 10px;
+  display: flex;
+}
+
+fieldset {
+
+  margin-top: 2rem;
+  width: 50%;
+  font-size: 1rem;  
+  .button-style{
+    margin-top: 1rem;
+    background-color: $red;
+    border-radius: 0.3rem;
+    width: 6em;
+    padding: 0.5rem   ;
+    color: $white;
+    text-align: center;
+   }   
+}
+.form-footer{
+  margin-top:  2rem;  
+  .form-button{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+ 
+  }
+  input#newsletter {  
+    width: 1em;
+  }
+  .payment {
+    width: 1em;
+  }
+  input#approval {  
+    width: 1em;
+    background-color: $white;
+  }
+}
+.button-style.submit{
+  background-color:$green;
+} 
+.order-container {
+  margin-left: 10vw;
+}
+

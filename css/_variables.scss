@@ -4,12 +4,13 @@ $font-primary: 'Roboto', sans-serif;
 
 
 // primary colors
-$yellow: #f4cf71  ; 
-$green:  rgb(14, 163, 63) ;  
-$red:    #e21f1f ; 
+$beige: beige ; 
+$green:  rgb(21, 138, 62) ;  
+$red:    #7b1a1a ; 
 $white:  #ffffff  ;  
   
 
 @function rem($size) {
     @return calc($size / 16) * 1rem;
  } 
+ // unroppa 

@@ -30,3 +30,9 @@ Idag har  jag insett vikten att vid uppstart alla har synkade settings, extensio
 **Jag behöver hjälp med** att förstå hur man ska tänka kring merge av branscher. Det är fortfarande inte har 100% koll på hur man ska tänka med branscher när man merge:a sin bransch till main. Om man behöver hämta hem allt från main till sin bransch innan man merge:ar sin bransch till main.
 
 **Idag har jag lärt mig** att det är viktigt att ha samma settings i VS för att minimera risken att saker och ting blir annourlunda.
+
+## Namn: Nataliya Lisjö
+**Idag har jag** skapade json, sass compressed watching,  
+**Ett problem jag har**  med separat  filen  order.html ser inte css ???
+**Jag behöver hjälp med** :  order.html , git in VSC panel 'sourse control'
+**Idag har jag lärt mig** git /merge genom terminalen i VSC
