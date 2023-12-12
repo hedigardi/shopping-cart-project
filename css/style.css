@@ -320,7 +320,6 @@ html {
 }
 
 footer {
-  position: absolute;
   bottom: 0;
   width: 100vw;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
