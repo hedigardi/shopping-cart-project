@@ -12,27 +12,27 @@
 
 ## Namn: Sanjin Đumišić
 
-**Idag har jag** 
+**Idag har jag** jobbat med att koppla ihop javascript och html i ett lab-repo, där jag går loss.
 
-**Ett problem jag har** 
+**Jag ser fram emot** att gå igenom en Munkbutik imorgon och utgå från den för att lära mig korrekt och modern beginners js-coding för butik"
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med** att hitta relevanta lärorika och inspirerande repos där man gör något enkelt och kul. :art:
 
-**Idag har jag lärt mig** 
-
-## Namn: 
-
-**Idag har jag** 
-
-**Ett problem jag har** 
-
-**Jag behöver hjälp med** 
-
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig** Kollat på inneHTML och varför det är bad-practice och tittat på alternativen. Skissat upp flödet från ett 'add to cart' och vad som händer i förloppet till kundvagnen.
 
 ## Namn:
 
-**Idag har jag** 
+**Idag har jag**
+
+**Ett problem jag har**
+
+**Jag behöver hjälp med**
+
+**Idag har jag lärt mig**
+
+## Namn:
+
+**Idag har jag**
 
 **Ett problem jag har**
 
