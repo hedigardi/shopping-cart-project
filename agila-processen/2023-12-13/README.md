@@ -1,0 +1,41 @@
+# Datum: 2023-12-13
+
+## Namn: Hedi Gardi
+
+**Idag har jag** 
+
+**Ett problem jag har** 
+
+**Jag behöver hjälp med** 
+
+**Idag har jag lärt mig** 
+
+## Namn: Sanjin Đumišić
+
+**Idag har jag** 
+
+**Ett problem jag har** 
+
+**Jag behöver hjälp med** 
+
+**Idag har jag lärt mig** 
+
+## Namn: 
+
+**Idag har jag** 
+
+**Ett problem jag har** 
+
+**Jag behöver hjälp med** 
+
+**Idag har jag lärt mig** 
+
+## Namn:
+
+**Idag har jag** 
+
+**Ett problem jag har**
+
+**Jag behöver hjälp med**
+
+**Idag har jag lärt mig**
