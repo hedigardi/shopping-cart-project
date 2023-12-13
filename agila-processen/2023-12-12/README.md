@@ -10,15 +10,15 @@
 
 **Idag har jag lärt mig** att det lönar sig att ha en agenda för daily standups för att vara effektiv med tiden.
 
-## Namn: 
+## Namn: Sanjin Đumišić
 
-**Idag har jag** 
+**Idag har jag** Läst och lyssnat om Agil/Scrum, om dess historia, implementering och dagdrömt om hur det är på riktiga företag. Sedan skapat en sanjin-js-lab för att experimentera med js i ett avskilt hörn på repot. 🪓
 
-**Ett problem jag har** 
+**Ett problem jag har** att vi inte fått någon instruktion eller exempel på JS<->HTML interaktion en endaste gång inför grupparbetet.
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med** hitta fler exempel på enkla produkter och kundkorgar för nybörjare.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** bli självsäkrare med terminalen i VSC och jag börjar komma ihåg lite commands. ✨
 
 ## Namn: 
 
