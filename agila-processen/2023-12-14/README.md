@@ -12,23 +12,23 @@
 
 ## Namn: Sanjin Đumišić
 
-**Idag har jag** 
+**Idag har jag** Övat på JS i en enkel butiksmiljö. Tittat på videos om Agil/Scrum.
 
-**Jag ser fram emot** 
+**Ett problem jag har**
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med** via AI få hjälp med att se hur man kan göra för alternativ till innerHTML. :warning:
 
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig** att innerHTML är absolut oönskat och bad practice, samt varför. Jag har övat muskelminnet med JS.
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag** 
+**Idag har jag**
 
-**Ett problem jag har** 
+**Ett problem jag har**
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med**
 
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig**
 
 ## Namn: Nataliya Lisjö
 
