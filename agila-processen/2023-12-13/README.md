@@ -20,15 +20,15 @@
 
 **Idag har jag lärt mig** Kollat på inneHTML och varför det är bad-practice och tittat på alternativen. Skissat upp flödet från ett 'add to cart' och vad som händer i förloppet till kundvagnen.
 
-## Namn:
+## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag** arbetat med arrays för att testa att skapa listor med data och tänkt logiskt på vilket sätt man behöver förändra datan i denna listan.
 
-**Ett problem jag har**
+**Ett problem jag har** är att jag inte kan översätta logisken till kod till fullo ännu.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** komplexa if satser där t.ex. en plats i en array ska hittas för att förändra en annan del datan kopplat till den platsen. 
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** att jag kan uttrycka mina tankar i logisk text innan jag ger mig an kodning så att jag vet vad jag verkligen vill skapa.
 
 ## Namn:
 
