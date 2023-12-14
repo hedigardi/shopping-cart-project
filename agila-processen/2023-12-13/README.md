@@ -30,7 +30,7 @@
 
 **Idag har jag lärt mig** att jag kan uttrycka mina tankar i logisk text innan jag ger mig an kodning så att jag vet vad jag verkligen vill skapa.
 
-## Namn:
+## Namn: Nataliya Lisjö
 
 **Idag har jag**
 

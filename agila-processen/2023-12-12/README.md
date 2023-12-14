@@ -30,7 +30,7 @@
 
 **Idag har jag lärt mig** hur vissa ändringar av koden av andra kan förändra det för den delan jag arbetar med.
 
-## Namn:
+## Namn: Nataliya Lisjö
 
 **Idag har jag** 
 
