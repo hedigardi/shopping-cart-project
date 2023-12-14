@@ -20,15 +20,15 @@
 
 **Idag har jag lärt mig** bli självsäkrare med terminalen i VSC och jag börjar komma ihåg lite commands. ✨
 
-## Namn: 
+## Namn: Rasmus Wersäll
 
-**Idag har jag** 
+**Idag har jag** fixat en issue relaterat till footer position. Jag har gjort mitt bästa för att arbeta agilt genom att uppdatera project board, skapat en branch, fixat koden och bett om review inför merge av branch till main.
 
-**Ett problem jag har** 
+**Ett problem jag har** är att det kan vara svårt att följa vem som gjort vilka ändringar för att sedan ta upp det till diskussion.
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med** hur man skapar och använder en gitignore fil.
 
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig** hur vissa ändringar av koden av andra kan förändra det för den delan jag arbetar med.
 
 ## Namn:
 
