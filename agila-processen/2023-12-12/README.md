@@ -32,10 +32,11 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag** har arbetat med formular - css , fixat bug for input -checkbox , lagt till kundkorg order i html , och css 
+**Idag har jag** har arbetat med formular - html  , 
+**Ett problem jag har**     formular --- html form , feldset 
+**Idag har jag lärt mig**  html form , feldset ---hur man använder det  
+**Jag behöver hjälp med**  .
+ 
+ 
 
-**Ett problem jag har** input -checkbox , input - radio visualisering , grid visualisering i formular mobile- decktop view 
-
-**Jag behöver hjälp med** gitignore filen ??
-
-**Idag har jag lärt mig** input -checkbox , input - radio visualisering
+ 
