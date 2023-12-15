@@ -15,11 +15,11 @@
 **Idag har jag** kodad js och implementerat html/css in i js dokumentet för att öva på en interaktiv sida. Idag visade vi varandras labbprojekt och gett feedback på det. :bulb:
 
 **Ett problem jag har** är att jag inte förstår vissa specifika moment med js och html/css i dynamisk design. Vissa 
-cs nem ssc dem attäl rä renoitknuf aksimany
+funktioner är lätta med css men svåra i en dynamisk js-variant.
 
-**Jag behöver hjälp med** 
+**Jag ser fram emot** att om några dagar ha gjort alla delar på en dynamisk webbshop. :bomb:
 
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig** att utöver implementering av html/css i js också felsöka en hel del och bli snabb och bekväm med vissa metoder.
 
 ## Namn: Rasmus Wersäll
 
