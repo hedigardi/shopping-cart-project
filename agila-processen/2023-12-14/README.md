@@ -22,13 +22,13 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag** övat på att skapa och manipulera arrayer i ett testprojekt.
 
-**Ett problem jag har**
+**Ett problem jag har** är att grundligt förstå hela syntaxen för vissa JS-funktioner för att manipulera data i arrayer. 
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** hur jag ska tänka när jag ska skapa nestlade funktioner i flera steg med JS.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** skriva grundläggande och mycket enkla funktioner i JS och fokuserat på syntaxen.
 
 ## Namn: Nataliya Lisjö
 
