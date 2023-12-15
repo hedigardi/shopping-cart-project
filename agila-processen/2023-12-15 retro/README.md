@@ -2,19 +2,20 @@
 
 ## Namn: Hedi Gardi
 
-**Idag har jag** 
+**Idag har jag** labbat vidare med JS och och CSS för att få till designen på HTML sidan. Dessutom har vi visat ett demo för varandra på labb-projektet och försökt ge feedback till varandra så att vi kan ta dessa till sprint2.
 
-**Ett problem jag har** 
+**Ett problem jag har** är  problem med att få till så att när man klickar på kundvagnenn så ska det öppnas popup med produkter som man har lagt till där. 
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med** att förstå JS kopplingar med HTML.
 
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig** hur man använder LiveShare and co-author funktionen i VS. 
 
 ## Namn: Sanjin Đumišić
 
-**Idag har jag** 
+**Idag har jag** kodad js och implementerat html/css in i js dokumentet för att öva på en interaktiv sida. Idag visade vi varandras labbprojekt och gett feedback på det. :bulb:
 
-**Ett problem jag har**
+**Ett problem jag har** är att jag inte förstår vissa specifika moment med js och html/css i dynamisk design. Vissa 
+cs nem ssc dem attäl rä renoitknuf aksimany
 
 **Jag behöver hjälp med** 
 
