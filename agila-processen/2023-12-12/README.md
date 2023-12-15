@@ -32,10 +32,10 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag** 
+**Idag har jag** har arbetat med formular - css , fixat bug for input -checkbox , lagt till kundkorg order i html , och css 
 
-**Ett problem jag har**
+**Ett problem jag har** input -checkbox , input - radio visualisering , grid visualisering i formular mobile- decktop view 
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** gitignore filen ??
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** input -checkbox , input - radio visualisering
