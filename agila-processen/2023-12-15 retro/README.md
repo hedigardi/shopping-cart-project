@@ -33,10 +33,10 @@ funktioner är lätta med css men svåra i en dynamisk js-variant.
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag** gick genom MUNKSHOP video och provat implementera den i våran webbproject 
 
-**Ett problem jag har**
+**Ett problem jag har** innerHTML har error --- cannot set property of null , använder första gång -Live Share --- kan inte sign till grupp , sökt varför -- hittad inte 
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** innerHTML har error --- cannot set property of null  , -Live Share --- kan inte sign till grupp ,
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** sökt i fell i innerHTML , flera  orsak för det
