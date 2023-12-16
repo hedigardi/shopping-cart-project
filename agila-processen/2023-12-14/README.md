@@ -32,7 +32,7 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag**  tittad video med array och trännad array from JS 
 
 **Ett problem jag har**
 
