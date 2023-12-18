@@ -1,14 +1,14 @@
-# Datum: 2023-12-14
+# Datum: 2023-12-18
 
 ## Namn: Hedi Gardi
 
-**Idag har jag**
+**Idag har jag** lagt mycket tid på att lära mig DOM som Michael gick genom på dagens föreläsning.
 
-**Ett problem jag har**
+**Ett problem jag har** är att det inte finns tillräckligt med tid för att öva mer på alla JavaScript moment som vi går genom på lektionerna.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att kunna förstå hur man ska tänka kring JavaScript-delen på uppgiften för att kunna dela det på ett bra sätt inom gruppen.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** hur man får tag i olika HTML element får att sedan kunna manipulera dessa med JavaScript
 
 ## Namn: Sanjin Đumišić
 
