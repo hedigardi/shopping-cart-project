@@ -1,22 +1,20 @@
-footer{
+footer {
   bottom: 0;
   width: 100vw;
-  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: 2px solid $color-primary;
   display: flex;
   flex-direction: column;
 
-  .top-right-footer{
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  .top-right-footer {
     padding: 10px;
     width: 100%;
     display: flex;
     align-items: center;
 
-    .social-links{
+    .social-links {
       display: flex;
 
-
-      img{
+      img {
         width: 35px;
         height: 35px;
         border-radius: 10px;
@@ -28,25 +26,27 @@ footer{
     }
   }
 
-  .bottom-left-footer{
+  .bottom-left-footer {
     padding: 10px;
+    border-right: 2px solid $color-primary;
     width: 100%;
     display: flex;
-    
-    a{
+
+    a {
       display: block;
-      color: blue;
+      color: $color-primary-light;
       text-decoration: underline;
     }
 
-    a:hover{
-        outline: 1px solid blue;
-        outline-offset: 1px;
-        border-radius: 5px;
-        background-color: aqua;
+    a:hover {
+      outline: 1px solid $color-primary;
+      outline-offset: 1px;
+      border-radius: 5px;
+      background-color: $color-primary-light;
+      color: $color-primary;
     }
 
-    h2{
+    h2 {
       font-size: x-large;
     }
   }

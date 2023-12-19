@@ -1,5 +1,4 @@
-$color-primary-light: #f7cc7c;
-$color-primary: #ce7828;
+@import './variables';
 
 *,
 *::before,
@@ -24,15 +23,6 @@ html {
     height: 100vh;
 }
 
-.shopping-cart {
-    position: fixed;
-    top: 50px;
-    color: $color-primary;
-    background-color: $color-primary-light;
-    padding: 20px;
-    z-index: 2;
-}
-
 .name {
     color: $color-primary;
     background-color: $color-primary-light;
@@ -46,7 +36,7 @@ html {
     }
 
     &-button {
-        background-color: $color-primary;
+        background-color: $color-primary-light;
         height: 70px;
         width: 70px;
         position: fixed;
@@ -106,13 +96,13 @@ html {
             font-size: 25px;
             letter-spacing: 2px;
             padding: 10px 20px;
-            color: #fff;
+            color: $color-primary-light;
             text-decoration: none;
             text-transform: uppercase;
             background-image: linear-gradient(90deg,
                     transparent 0%,
                     transparent 50%,
-                    #fff 50%);
+                    $color-primary-light 50%);
             background-size: 220%;
             transition: all 0.4s;
         }
@@ -143,7 +133,7 @@ html {
         &::after {
             width: 30px;
             height: 2px;
-            background-color: #fff;
+            background-color: $color-primary;
             display: inline-block;
         }
 

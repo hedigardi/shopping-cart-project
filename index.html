@@ -12,14 +12,12 @@
 </head>
 
 <body>
+
   <header>
     <div class="container">
       <h1 class="name">Mormor Dagnys Bageri</h1>
     </div>
-    <div class="shopping-cart">
-      <img src="/img/shopping-cart.png" alt="Shopping Cart button" width="20" height="20" loading="lazy">
-      <a href="#">Kundvagn</a>
-    </div>
+    <div id="cart"></div>
     <div class="navigation">
       <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
       <label for="navi-toggle" class="navigation-button">
@@ -29,71 +27,108 @@
       <nav class="navigation-nav">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Hem</a>
+            <a href="#pastryContainer" class="navigation-link">Produkter</a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Om oss</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">Produkter</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">Kontakt</a>
+            <a href="#kontakt" class="navigation-link">Kontakt</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main>
-    <div class="products">
-      <div class="bakery-product">
-        <div class="img-overlay">Bread</div>
-        <img src="img/bread.jpg" alt="Fresh baked bread." class="product-image" height="1024" width="1024">
-        <div class="cart-overlay">Add to Cart</div>
-      </div>
-
-      <div class="bakery-product">
-        <div class="img-overlay">Dark Bread</div>
-        <img src="img/dark-bread.jpg" alt="Fresh baked full grain dark bread." class="product-image" height="1024"
-          width="1024">
-        <div class="cart-overlay">Add to Cart</div>
-      </div>
-
-      <div class="bakery-product">
-        <div class="img-overlay">Cinamon Bun</div>
-        <img src="img/cinnamon-bun.jpg" alt="Fresh baked cinnamon bun." class="product-image" height="1024"
-          width="1024">
-        <div class="cart-overlay">Add to Cart</div>
-      </div>
-
-      <div class="bakery-product">
-        <div class="img-overlay">Saffron bun</div>
-        <img src="img/saffron-bun.jpg" alt="Fresh baked saffron bun." class="product-image" height="1024" width="1024">
-        <div class="cart-overlay">Add to Cart</div>
-      </div>
- 
-      <div class="bakery-product">
-        <div class="img-overlay">Birthday Cake</div>
-        <img src="img/birthday-cake.jpg" alt="Delicious birthday cake." class="product-image" height="1024"
-          width="1024">
-        <div class="cart-overlay">Add to Cart</div>
-      </div>
- 
-
-      <div class="bakery-product">
-        <div class="img-overlay">Wedding Cake</div>
-        <img src="img/wedding-cake.jpg" alt="Delicious wedding cake." class="product-image" height="1024" width="1024">
-        <div class="cart-overlay">Add to Cart</div>
+    <div class="sort-buttons">
+      <div class="sort-btns-center">
+        <button id="sortByPrice">Sortera efter pris (stigande)</button>
+        <button id="sortByRating">Sortera efter omdöme (stigande)</button>
       </div>
     </div>
 
-    <section class="cart-container">
-      <h2>Formular</h2>
-      <div>
-        <a href="/html/order.html"> -- click--</a>
-      </div>    
-    </section>
+    <div id="pastryContainer"></div>
+
+    <div class="order-form">
+      <div class="divider">Kundvagn & beställning</div>
+      <form>
+        <label>Förnamn:
+          <span class="errorField"></span>
+          <input type="text" id="firstName" placeholder="Förnamn">
+        </label>
+        <label>Efternamn:
+          <span class="errorField"></span>
+          <input type="text" id="lastName" placeholder="Efternamn">
+        </label>
+        <label>Adress:
+          <span class="errorField"></span>
+          <input type="text" id="street" placeholder="Adress">
+        </label>
+        <label>Postnummer:
+          <span class="errorField"></span>
+          <input type="number" id="zipcode" placeholder="Postnummer">
+        </label>
+        <label>Postort:
+          <span class="errorField"></span>
+          <input type="text" id="city" placeholder="Postort">
+        </label>
+        <label>Ev.Portkod/Dörkod:
+          <span class="errorField"></span>
+          <input type="text" id="doorCode" placeholder="Ev.Portkod/Dörkod">
+        </label>
+        <label>Telefonnummer:
+          <span class="errorField"></span>
+          <input type="tel" id="mobile" placeholder="Telefonnummer">
+        </label>
+        <label>E-mail:
+          <span class="errorField"></span>
+          <input type="email" id="email" placeholder="E-mail">
+        </label>
+
+        <div>
+          <label>
+            <input type="radio" name="paymentOption" value="card"> Betalkort/kreditkort
+          </label>
+          <label>
+            <input type="radio" name="paymentOption" value="invoice"> Faktura
+          </label>
+        </div>
+
+        <div id="creditCardDetails" class="hidden">
+          <label>
+            Kortnummer:
+            <input type="number" id="cardNumber" placeholder="Kortnummer">
+          </label>
+          <label>
+            Utgångsdatum (MM/ÅÅ):
+            <input type="number" id="expiryMonth" placeholder="MM">
+            <input type="number" id="expiryYear" placeholder="ÅÅ">
+          </label>
+        </div>
+
+        <div id="invoiceDetails" class="hidden">
+          <label>
+            Organisationsnummer/Personnummer:
+            <span class="errorField"></span>
+            <input type="text" id="ssn" placeholder="Organisationsnummer/Personnummer">
+          </label>
+        </div>
+
+        <label>
+          <input type="checkbox" id="gdprCheck"> Godkännande av behandling av personuppgifter
+        </label>
+
+        <label>
+          <input type="checkbox" id="newsletter" checked> Nyhetsbrevet
+        </label>
+
+        <input type="button" id="resetForm" value="Återställ" class="reset-btn">
+        <input type="button" id="sendForm" value="Skicka beställning" disabled class="send-btn">
+      </form>
+
+      <div id="popup" class="cover hidden"></div>
+      <div class="popup hidden" id="orderSummary">
+        Ordersammanfattning
+        <button id="closePopup">Stäng</button>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -104,7 +139,7 @@
         <a href="https://www.facebook.com"><img src="img/facebook.webp"></a>
       </div>
     </div>
-    <div class="bottom-left-footer">
+    <div class="bottom-left-footer" id="kontakt">
       <address>
         <h2>Kontakt</h2>
         <p>Vårfruggatan 8</p>
@@ -114,8 +149,8 @@
       </address>
     </div>
   </footer>
-  <script src="/js/app.js"></script>
 
-</body>
+    <script type="module" src="js/main.js"></script>
+  </body>
 
 </html>
