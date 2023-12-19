@@ -1,8 +1,10 @@
+// Hitta HTML-element
 const pastryHtmlContainer = document.querySelector('#pastryContainer');
 const cartHtmlContainer = document.querySelector('#cart');
 const sortByPriceBtn = document.querySelector('#sortByPrice');
 const sortByRatingBtn = document.querySelector('#sortByRating');
 
+// Bakverk produkterna
 const pastry = [
   {
     id: 1,
@@ -90,9 +92,7 @@ const pastry = [
   },
 ];
 
-sortByPriceBtn.addEventListener('click', sortByPrice);
-sortByRatingBtn.addEventListener('click', sortByRating);
-
+// Sorteringsfunktioner
 function sortByPrice() {
   pastry.sort((a, b) => a.price - b.price);
   printPastry();
@@ -103,13 +103,14 @@ function sortByRating() {
   printPastry();
 }
 
+// Lägg till eventlyssnare för sortering
+sortByPriceBtn.addEventListener('click', sortByPrice);
+sortByRatingBtn.addEventListener('click', sortByRating);
+
+// Ändra mängdfunktioner
 function decreaseAmount(e) {
   const index = e.currentTarget.dataset.id;
-  if (pastry[index].amount <= 0) {
-    pastry[index].amount = 0;
-  } else {
-    pastry[index].amount -= 1;
-  }
+  pastry[index].amount = Math.max(0, pastry[index].amount - 1);
   printPastry();
 }
 
@@ -119,50 +120,57 @@ function increaseAmount(e) {
   printPastry();
 }
 
+// Utskriftsfunktion för bakverk
 function printPastry() {
   pastryHtmlContainer.innerHTML = '';
 
-  pastry.forEach((pastry, index) => {
+  pastry.forEach((pastryItem, index) => {
+    const { name, images, price, rating, amount } = pastryItem;
+    
     pastryHtmlContainer.innerHTML += `
-        <article>
-          <h3>${pastry.name}</h3>
-          <img src="${pastry.images[0].src}" alt="${pastry.images[0].alt}">
-          <div>Pris: <span>${pastry.price}</span> kr</div>
-          <div>Omdöme: <span>${pastry.rating}</span></div>
-          <div>Antal: <span>${pastry.amount}</span></div>
-          <button class="minus" data-id="${index}">-</button>
-          <button class="plus" data-id="${index}">+</button>
-        </article>
-      `;
+      <article>
+        <h3>${name}</h3>
+        <img src="${images[0].src}" alt="${images[0].alt}">
+        <div>Pris: <span>${price}</span> kr</div>
+        <div>Omdöme: <span>${rating}</span></div>
+        <div>Antal: <span>${amount}</span></div>
+        <button class="minus" data-id="${index}">-</button>
+        <button class="plus" data-id="${index}">+</button>
+      </article>
+    `;
   });
 
-  const minusBtns = document.querySelectorAll('button.minus');
-  const plusBtns = document.querySelectorAll('button.plus');
+  const minusBtns = pastryHtmlContainer.querySelectorAll('button.minus');
+  const plusBtns = pastryHtmlContainer.querySelectorAll('button.plus');
 
   minusBtns.forEach(btn => {
     btn.addEventListener('click', decreaseAmount);
   });
 
-  plusBtns.forEach((btn) => {
+  plusBtns.forEach(btn => {
     btn.addEventListener('click', increaseAmount);
   });
 
   printCartpastry();
 }
 
+// Utskriftsfunktion för kundvagnen
 function printCartpastry() {
   cartHtmlContainer.innerHTML = '';
 
   let sum = 0;
 
-  pastry.forEach(pastry => {
-    if (pastry.amount > 0) {
-      sum += pastry.amount * pastry.price;
+  pastry.forEach(pastryItem => {
+    if (pastryItem.amount > 0) {
+      sum += pastryItem.amount * pastryItem.price;
       cartHtmlContainer.innerHTML += `
         <article>
-            <span>${pastry.amount}st ${pastry.name} - ${pastry.amount * pastry.price} kr</span>
+          <span>${pastryItem.amount}st ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr</span>
         </article>
       `;
+
+      // Lägg till det aktuella div-innehållet i orderSummary div
+      orderSummary.innerHTML += cartHtmlContainer.innerHTML;
     }
   });
 
@@ -171,10 +179,16 @@ function printCartpastry() {
     <p>Totalsumma: ${sum} kr</p>`;
 }
 
+// Utskrift av bakverk
 printPastry();
 
-// ------------------------------------ ORDER FORM ------------------------------
 
+// ------------------------------------------------------------------------------------------
+// ------------------------------------ Kundvagn & beställning ------------------------------
+// ------------------------------------------------------------------------------------------
+
+
+// Hitta HTML-element
 const invoiceDetails = document.querySelector('#invoiceDetails');
 const creditCardDetails = document.querySelector('#creditCardDetails');
 const paymentOptions = document.querySelectorAll('[name="paymentOption"]');
@@ -185,33 +199,49 @@ const orderSummary = document.querySelector('#orderSummary');
 const orderBtn = document.querySelector('#sendForm');
 const resetButton = document.querySelector('#resetForm');
 
-
 let invoicePaymentSelected = false;
 
+// Validering av inmatningsfält
 inputFields.forEach(field => {
   field.addEventListener('keyup', validateFormField);
   field.addEventListener('focusout', validateFormField);
 });
 
+// Hantera ändring i betalningsalternativ
 paymentOptions.forEach(radio => {
   radio.addEventListener('change', togglePaymentOptions);
 });
 
-function validateFormField() {
+// Hantera växling av betalningsalternativ
+function togglePaymentOptions(e) {
+  if (e.currentTarget.value === 'invoice') {
+    invoiceDetails.classList.remove('hidden');
+    creditCardDetails.classList.add('hidden');
+    invoicePaymentSelected = true;
+  } else {
+    invoiceDetails.classList.add('hidden');
+    creditCardDetails.classList.remove('hidden');
+    invoicePaymentSelected = false;
+  }
+}
 
+// Valideringsfunktion för formulärfält
+function validateFormField() {
   let hasErrors = false;
 
   inputFields.forEach(field => {
     const errorField = field.previousElementSibling;
     let errorMsg = '';
+
     if (errorField !== null) {
       errorField.innerHTML = '';
     }
 
+    // Validering av olika fält...
     switch (field.id) {
       case 'zipcode':
         if (field.value.length != 5) {
-          errorMsg = 'Fältet är ej korrekt ifylld!';
+          errorMsg = 'Fältet är ej korrekt ifylld!'; // felmeddelande
           hasErrors = true;
         }
         break;
@@ -222,7 +252,7 @@ function validateFormField() {
         case 'mobile':
         case 'email':
         if (field.value.length === 0) {
-          errorMsg = 'Fältet är ej korrekt ifylld!';
+          errorMsg = 'Fältet är ej korrekt ifylld!'; // felmeddelande
           hasErrors = true;
         }
         break;
@@ -242,6 +272,7 @@ function validateFormField() {
     }
   });
 
+  // Aktivera/inaktivera skicka-knappen baserat på validering
   if (hasErrors) {
     document.querySelector('#sendForm').setAttribute('disabled', 'disabled');
     orderBtn.removeEventListener('click', sendForm);
@@ -251,6 +282,7 @@ function validateFormField() {
   }
 }
 
+// Skicka formulär
 function sendForm() {
   popup.classList.remove('hidden');
   orderSummary.classList.remove('hidden');
@@ -258,6 +290,7 @@ function sendForm() {
   document.querySelector('#closePopup').addEventListener('click', hideOrderConfirmation);
 }
 
+// Återställ formulärfält
 function resetFormFields() {
   document.getElementById('firstName').placeholder = 'Förnamn';
   document.getElementById('lastName').placeholder = 'Efternamn';
@@ -279,26 +312,14 @@ function resetFormFields() {
   hideOrderConfirmation();
 }
 
+// Återställning vid reset-knapptryck
 resetButton.addEventListener('click', resetFormFields);
 
+// Göm orderbekräftelse-popup
 function hideOrderConfirmation() {
   popup.classList.add('hidden');
   orderSummary.classList.add('hidden');
   popup.removeEventListener('click', hideOrderConfirmation);
-  document
-    .querySelector('#closePopup')
-    .removeEventListener('click', hideOrderConfirmation);
-}
-
-function togglePaymentOptions(e) {
-  if (e.currentTarget.value === 'invoice') {
-    invoiceDetails.classList.remove('hidden');
-    creditCardDetails.classList.add('hidden');
-    invoicePaymentSelected = true;
-  } else {
-    invoiceDetails.classList.add('hidden');
-    creditCardDetails.classList.remove('hidden');
-    invoicePaymentSelected = false;
-  }
+  document.querySelector('#closePopup').removeEventListener('click', hideOrderConfirmation);
 }
 
