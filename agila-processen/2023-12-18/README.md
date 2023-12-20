@@ -32,10 +32,9 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag** JS dagens lectioner
 
-**Ett problem jag har**
-
+**Ett problem jag har** 
 **Jag behöver hjälp med**
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** att leka med dynamisk JS,  hämta , lägga class , id och mm . Shopping list from Michael 
