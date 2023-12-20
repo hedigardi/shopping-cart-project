@@ -12,13 +12,13 @@
 
 ## Namn: Sanjin Đumišić
 
-**Idag har jag** 
+**Idag har jag** Gjort övningar i JS samt tittat på butiksmallas på dynamiska sidor.
 
-**Ett problem jag har** 
+**Ett problem jag har** är att behöva kolla upp kodnästlingar iom att jag ännu inte kan allt :100: procent i muskelminnet.
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med** att hitta repetativa övningar på olika delar av JS som är relevanta för mig just nu, för uppgiften och för nybörjare.
 
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig** några nya JS stringManipulationer. :barber: Som jag hoppas komma ihåg. Men jag märkte att man nu förstår mer och mer även om man inte kan skriva ut koden korrekt.
 
 ## Namn: Rasmus Wersäll
 
