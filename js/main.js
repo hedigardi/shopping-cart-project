@@ -169,7 +169,7 @@ function printCartpastry() {
         </article>
       `;
 
-      // Lägg till det aktuella div-innehållet i orderSummary div
+      // Lägger till innehållet från 'cart div' till 'orderSummary div
       orderSummary.innerHTML += cartHtmlContainer.innerHTML;
     }
   });
@@ -258,10 +258,10 @@ function validateFormField() {
         break;
       case 'ssn':
         const regex = new RegExp(
-          /^(\d{10}|\d{12}|\d{6}-\d{4}|\d{8}-\d{4}|\d{8} \d{4}|\d{6} \d{4})/
+          /^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$/
         );
         if (regex.exec(field.value) === null) {
-          errorMsg = 'Felaktig personnummer!';
+          errorMsg = 'Felaktig Organisationsnummer/Personnummer!'; // felmeddelande
           hasErrors = true;
         }
         break;
@@ -282,10 +282,32 @@ function validateFormField() {
   }
 }
 
+// Funktion för att visa beställningsdetaljer i popup-fönstret
+function showOrderSummary() {
+  const orderSummary = document.querySelector('#orderSummary');
+  orderSummary.innerHTML = '<button id="closePopup">Stäng fönstret</button><p>Tack för din beställning! Den har nu skickats och är på väg till dig.</p>';
+  
+  const orderList = document.createElement('ul');
+
+  pastry.forEach(pastryItem => {
+    if (pastryItem.amount > 0) {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${pastryItem.amount} st ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr`;
+      orderList.appendChild(listItem);
+    }
+  });
+
+  orderSummary.appendChild(orderList);
+
+  orderSummary.classList.remove('hidden');
+  document.querySelector('#closePopup').addEventListener('click', hideOrderConfirmation);
+}
+
 // Skicka formulär
 function sendForm() {
   popup.classList.remove('hidden');
-  orderSummary.classList.remove('hidden');
+  //orderSummary.classList.remove('hidden');
+  showOrderSummary();
   popup.addEventListener('click', hideOrderConfirmation);
   document.querySelector('#closePopup').addEventListener('click', hideOrderConfirmation);
 }
