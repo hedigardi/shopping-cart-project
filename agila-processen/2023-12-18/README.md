@@ -32,9 +32,9 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag** JS dagens lectioner
+**Idag har jag** på helgen Jenny munkshop  ---shopping cart och formular . Michaels  JS dagens lectioner
 
-**Ett problem jag har** 
-**Jag behöver hjälp med**
+**Ett problem jag har**  provar anropa shopping cart from 2.html  som skapad på index.html med dynamisk JS  ---funkar inte --- förståd inte hur det sparas i vilken minne .
+**Jag behöver hjälp med**     hur det sparas i vilken minne dem andringar som vi görd i Product array .
 
 **Idag har jag lärt mig** att leka med dynamisk JS,  hämta , lägga class , id och mm . Shopping list from Michael 
