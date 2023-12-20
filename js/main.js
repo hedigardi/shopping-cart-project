@@ -103,7 +103,7 @@ function sortByRating() {
   printPastry();
 }
 
-// Lägg till eventlyssnare för sortering
+// Lägger till eventlyssnare för sortering
 sortByPriceBtn.addEventListener('click', sortByPrice);
 sortByRatingBtn.addEventListener('click', sortByRating);
 
@@ -120,7 +120,7 @@ function increaseAmount(e) {
   printPastry();
 }
 
-// Utskriftsfunktion för bakverk
+// Utskriftsfunktion för bakverken
 function printPastry() {
   pastryHtmlContainer.innerHTML = '';
 
@@ -154,7 +154,7 @@ function printPastry() {
   printCartpastry();
 }
 
-// Utskriftsfunktion för kundvagnen
+// Utskriftsfunktion för lilla hörn kundvagnen
 function printCartpastry() {
   cartHtmlContainer.innerHTML = '';
 
@@ -320,7 +320,6 @@ function showOrderSummary() {
 // Skicka formulär
 function sendForm() {
   popup.classList.remove('hidden');
-  //orderSummary.classList.remove('hidden');
   showOrderSummary();
   popup.addEventListener('click', hideOrderConfirmation);
   document.querySelector('#closePopup').addEventListener('click', hideOrderConfirmation);
@@ -328,17 +327,17 @@ function sendForm() {
 
 // Återställ formulärfält
 function resetFormFields() {
-  document.getElementById('firstName').placeholder = 'Förnamn';
-  document.getElementById('lastName').placeholder = 'Efternamn';
-  document.getElementById('street').placeholder = 'Adress';
-  document.getElementById('zipcode').placeholder = 'Postnummer';
-  document.getElementById('city').placeholder = 'Postort';
-  document.getElementById('mobile').placeholder = 'Telefonnummer';
-  document.getElementById('email').placeholder = 'E-mail';
-  document.getElementById('cardNumber').placeholder = 'Kortnummer';
-  document.getElementById('expiryMonth').placeholder = 'MM';
-  document.getElementById('expiryYear').placeholder = 'ÅÅ';
-  document.getElementById('ssn').placeholder = 'Organisationsnummer/Personnummer';
+  document.getElementById('firstName').value = '';
+  document.getElementById('lastName').value = '';
+  document.getElementById('street').value = '';
+  document.getElementById('zipcode').value = '';
+  document.getElementById('city').value = '';
+  document.getElementById('mobile').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('cardNumber').value = '';
+  document.getElementById('expiryMonth').value = '';
+  document.getElementById('expiryYear').value = '';
+  document.getElementById('ssn').value = '';
 
   const errorFields = document.querySelectorAll('.errorField');
   errorFields.forEach(field => {
