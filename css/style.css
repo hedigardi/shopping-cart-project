@@ -106,6 +106,12 @@ label > span {
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: auto;
+  line-height: 1.8;
+}
+
+.total-sum-style {
+  color: #3d2d3a;
+  font-weight: bold;
 }
 
 .send-btn {
@@ -507,6 +513,12 @@ label > span {
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: auto;
+  line-height: 1.8;
+}
+
+.total-sum-style {
+  color: #3d2d3a;
+  font-weight: bold;
 }
 
 .send-btn {

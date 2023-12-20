@@ -285,7 +285,7 @@ function validateFormField() {
 // Funktion för att visa beställningsdetaljer i popup-fönstret
 function showOrderSummary() {
   const orderSummary = document.querySelector('#orderSummary');
-  orderSummary.innerHTML = '<button id="closePopup">Stäng fönstret</button><p>Tack för din beställning! Den har nu skickats och är på väg till dig.</p>';
+  orderSummary.innerHTML = '<button id="closePopup">Stäng fönstret</button><p>Tack för din beställning! Den har nu skickats och är på väg till dig.</p><div class="divider"></div>';
   
   const orderList = document.createElement('ul');
 
@@ -298,6 +298,20 @@ function showOrderSummary() {
   });
 
   orderSummary.appendChild(orderList);
+
+  // Beräknar totalsumman för alla produkter i kundvagnen
+  let totalSum = 0;
+  pastry.forEach(pastryItem => {
+    if (pastryItem.amount > 0) {
+      totalSum += pastryItem.amount * pastryItem.price;
+    }
+  });
+
+  // Lägger till totalsumman i orderöversikten
+  const totalListItem = document.createElement('li');
+  totalListItem.textContent = `Totalsumma: ${totalSum} kr`;
+  totalListItem.classList.add('total-sum-style');
+  orderList.appendChild(totalListItem);
 
   orderSummary.classList.remove('hidden');
   document.querySelector('#closePopup').addEventListener('click', hideOrderConfirmation);
