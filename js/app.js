@@ -3,4 +3,5 @@
 function resetInput() {
     document.getElementById("formList").reset();
   }
-  
+//input checkbox
+ 

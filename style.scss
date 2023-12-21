@@ -4,8 +4,12 @@
 
 @import "css/header";
 
+@import "css/order";
+
 @import "css/footer";
 
 @media screen and (min-width: 820px) {
   @import "css/desktop";
-};
+}
+
+;

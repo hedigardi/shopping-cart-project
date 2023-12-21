@@ -1,4 +1,4 @@
-const customers=[                     //kontrol in input  
+const customers=[               //kontrol in input  
     {
         id : 1,
         firstName:"",

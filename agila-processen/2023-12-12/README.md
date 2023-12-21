@@ -1,41 +1,42 @@
 # Datum: 2023-12-12
 
-## Namn: Rasmus Wersäll
+## Namn: Hedi Gardi
 
-**Idag har jag** genomfört två issues från vårt project board och mergat det med development branch och sedan till main.
+**Idag har jag** skapat kundvagn presentationen på startsidan och merge:at den till main. Sedan fördelade vi ut nya tasks.
 
-**Ett problem jag har** är att development branch inte gick att få upp i VSC, så vi mergade den med main för att kunna se resultatet.
+**Ett problem jag har** är att vi har inte gått genom hur man får ut JS i HTML för att kunna påbörja med nästa del av projektet.
 
-**Jag behöver hjälp med** hur vi i gruppen snabbt kan bli mer samsynta utan att det ska bli allt för långa möten.
+**Jag behöver hjälp med** hur man kopplar JS och HTML så att man kan få ut saker i HTML sidan.
 
-**Idag har jag lärt mig** om hur man kan konfigurerar settings.json och att det är viktigt att alla i gruppen i viss utssträckning har samma inställnignar.
+**Idag har jag lärt mig** att det lönar sig att ha en agenda för daily standups för att vara effektiv med tiden.
 
 ## Namn: Sanjin Đumišić
 
-**Idag har jag** tillsammans med gruppen merge:at våra dev-branscher in till main.
+**Idag har jag** Läst och lyssnat om Agil/Scrum, om dess historia, implementering och dagdrömt om hur det är på riktiga företag. Sedan skapat en sanjin-js-lab för att experimentera med js i ett avskilt hörn på repot. 🪓
 
-**Ett problem jag har** är att olika settings i VS ställde till med CSS länkningen i början.
+**Ett problem jag har** att vi inte fått någon instruktion eller exempel på JS<->HTML interaktion en endaste gång inför grupparbetet.
 
-**Jag behöver hjälp med** att förstå hur man ska tänka kring merge av branscher. Det är fortfarande inte har 100% koll på hur man ska tänka med branscher när man merge:a sin bransch till main. Om man behöver hämta hem allt från main till sin bransch innan man merge:ar sin bransch till main.
+**Jag behöver hjälp med** hitta fler exempel på enkla produkter och kundkorgar för nybörjare.
 
-**Idag har jag lärt mig** att det är viktigt att ha samma settings i VS för att minimera risken att saker och ting blir annourlunda.
+**Idag har jag lärt mig** bli självsäkrare med terminalen i VSC och jag börjar komma ihåg lite commands. ✨
 
-## Namn: Hedi Gardi
+## Namn: Rasmus Wersäll
 
-**Idag har jag** tillsammans med gruppen merge:at våra dev-branscher in till main.
+**Idag har jag** fixat en issue relaterat till footer position. Jag har gjort mitt bästa för att arbeta agilt genom att uppdatera project board, skapat en branch, fixat koden och bett om review inför merge av branch till main.
 
-**Ett problem jag har** är att olika settings i VS ställde till med CSS länkningen i början.
+**Ett problem jag har** är att det kan vara svårt att följa vem som gjort vilka ändringar för att sedan ta upp det till diskussion.
 
-**Jag behöver hjälp med** att förstå hur man ska tänka kring merge av branscher. Det är fortfarande inte har 100% koll på hur man ska tänka med branscher när man merge:a sin bransch till main. Om man behöver hämta hem allt från main till sin bransch innan man merge:ar sin bransch till main.
+**Jag behöver hjälp med** hur man skapar och använder en gitignore fil.
 
-**Idag har jag lärt mig** att det är viktigt att ha samma settings i VS för att minimera risken att saker och ting blir annourlunda.
+**Idag har jag lärt mig** hur vissa ändringar av koden av andra kan förändra det för den delan jag arbetar med.
 
-## Namn:
+## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag** har arbetat med formular - html  , 
+**Ett problem jag har**     formular --- html form , feldset 
+**Idag har jag lärt mig**  html form , feldset ---hur man använder det  
+**Jag behöver hjälp med**  .
+ 
+ 
 
-**Ett problem jag har**
-
-**Jag behöver hjälp med**
-
-**Idag har jag lärt mig**
+ 
