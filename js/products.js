@@ -44,7 +44,7 @@ const pastry = [
   },
   {
     id: 4,
-    name: 'Saffron bun',
+    name: 'Saffron Bun',
     price: 10,
     images: [
       {

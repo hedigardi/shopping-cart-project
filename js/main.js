@@ -5,6 +5,9 @@ const sortByPriceBtn = document.querySelector('#sortByPrice');
 const sortByRatingBtn = document.querySelector('#sortByRating');
 const sortByLetterBtn = document.querySelector('#sortByLetter');
 const searchItemInput = document.querySelector('#searchItem');
+const filterBreadBtn = document.querySelector('#filterBread');
+const filterBunBtn = document.querySelector('#filterBun');
+const filterCakeBtn = document.querySelector('#filterCake');
 
 // Importera listan med bakverksprodukter till main.js
 import pastryList from './products.js';
@@ -28,16 +31,55 @@ function sortByLetter() {
   printPastry();
 }
 
-console.log(pastry);
-
 const searchItem = (e) => {
   const searchItems = document.querySelectorAll('article h3');
   const searchValue = e.target.value;
-  console.log(searchValue);
 
   searchItems.forEach((items) => {
     const itemName = items.firstChild.textContent.toLocaleLowerCase();
     if (itemName.indexOf(searchValue) !== -1) {
+      items.parentElement.style.display = 'revert';
+    } else {
+      items.parentElement.style.display = 'none';
+    }
+  });
+};
+
+const filterBread = () => {
+  const filterItems = document.querySelectorAll('article h3');
+
+  filterItems.forEach((items) => {
+    const filterName = items.firstChild.textContent;
+
+    if (filterName.indexOf('Bread') !== -1) {
+      items.parentElement.style.display = 'revert';
+    } else {
+      items.parentElement.style.display = 'none';
+    }
+  });
+};
+
+const filterBun = () => {
+  const filterItems = document.querySelectorAll('article h3');
+
+  filterItems.forEach((items) => {
+    const filterName = items.firstChild.textContent;
+
+    if (filterName.indexOf('Bun') !== -1) {
+      items.parentElement.style.display = 'revert';
+    } else {
+      items.parentElement.style.display = 'none';
+    }
+  });
+};
+
+const filterCake = () => {
+  const filterItems = document.querySelectorAll('article h3');
+
+  filterItems.forEach((items) => {
+    const filterName = items.firstChild.textContent;
+
+    if (filterName.indexOf('Cake') !== -1) {
       items.parentElement.style.display = 'revert';
     } else {
       items.parentElement.style.display = 'none';
@@ -50,6 +92,9 @@ sortByPriceBtn.addEventListener('click', sortByPrice);
 sortByRatingBtn.addEventListener('click', sortByRating);
 sortByLetterBtn.addEventListener('click', sortByLetter);
 searchItemInput.addEventListener('input', searchItem);
+filterBreadBtn.addEventListener('click', filterBread);
+filterBunBtn.addEventListener('click', filterBun);
+filterCakeBtn.addEventListener('click', filterCake);
 
 // Ändra mängdfunktioner
 function decreaseAmount(e) {
