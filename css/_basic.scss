@@ -9,6 +9,7 @@ html,
 main {
   color: $color-primary-light;
   font-family: $font-primary;
+  width: 100vw;
 }
 
 body {
@@ -46,12 +47,88 @@ h2 {
   line-height: 2;
 }
 
-.sort-btns-center {
+.sort-filter-search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 2.5rem;
+  position: sticky;
+  padding: 10px 0;
+  top: 0;
+  background-image: linear-gradient(to bottom, 
+  rgba(252,253,239,1), 
+  rgba(252,253,239,0.8), 
+  rgba(252,253,239,0.6), 
+  rgba(252,253,239,0.4));
+  z-index: 1;
+
+  .material-symbols-outlined{
+    font-size: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+
+.item-function-container{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  gap: 20px;
+}
+
+.left{
+  justify-content: flex-start;
+  left: 0;
+}
+
+.stack{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.search-center, .filter-center, .sort-center{
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.show{
+  visibility: visible;
+  z-index: 3;
+}
+
+.sort-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  button{
+    background-color: $color-primary;
+    padding: 15px 15px;
+    height: 36px;
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input{
+    padding: 0 !important;
+    width: 50% !important;
+    border-radius: 15px;
+    text-indent: 10px;
+    height: 35px;
+    
+  }
 }
 
 #pastryContainer {

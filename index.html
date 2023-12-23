@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="/css/style.min.css" rel="stylesheet">
 </head>
 
@@ -37,13 +38,38 @@
     </div>
   </header>
   <main>
-    <div class="sort-buttons">
-      <div class="sort-btns-center">
-        <button id="sortByLetter">Sortera i bokstavordning (A-Ö)</button>
-        <button id="sortByPrice">Sortera efter pris (stigande)</button>
-        <button id="sortByRating">Sortera efter omdöme (stigande)</button>
+    <section class="sort-filter-search">
+      <div class="item-function-container">
+        <span class="material-symbols-outlined" id="search-icon" title="Search">search</span>
+        <span class="material-symbols-outlined" id="filter-icon" title="Filter">filter_list</span>
+        <span class="material-symbols-outlined" id="sort-icon" title="Sort">swap_vert</span>
       </div>
-    </div>
+      <div class="stack">
+        <div class="sort-buttons">
+          <div class="search-center">
+            <input type="text" class="search-box" id="searchItem" placeholder="Sök här!"></button>
+          </div>
+        </div>
+        <div class="sort-buttons">
+          <div class="filter-center">
+            <button id="filterBread">Visa bröd</button>
+            <button id="filterCake">Visa tårtor</button>
+            <button id="filterBun">Visa bakelser</button>
+          </div>
+        </div>
+        <div class="sort-buttons">
+          <div class="sort-center">
+            <button id="sortByLetter"><span class="material-symbols-outlined">abc</span></button>
+            <button id="sortByPrice"><span class="material-symbols-outlined">
+              monetization_on
+              </span></button>
+            <button id="sortByRating"><span class="material-symbols-outlined">
+              star_rate
+              </span></button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div id="pastryContainer"></div>
 
@@ -148,7 +174,6 @@
     </div>
   </footer>
   <script type="module" src="js/main.js"></script>
-  <script type="script" src="js/sort.js"></script>
   </body>
 
 </html>

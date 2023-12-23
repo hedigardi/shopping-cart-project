@@ -1,12 +1,37 @@
 // Hitta HTML-element
 const pastryHtmlContainer = document.querySelector('#pastryContainer');
 const cartHtmlContainer = document.querySelector('#cart');
+const sortByPriceBtn = document.querySelector('#sortByPrice');
+const sortByRatingBtn = document.querySelector('#sortByRating');
+const sortByLetterBtn = document.querySelector('#sortByLetter');
+const searchItem = document.querySelector('#searchItem');
 
 // Importera listan med bakverksprodukter till main.js
 import pastryList from './products.js';
 
 // Bakverksprodukter
 const pastry = pastryList;
+
+// Sorteringsfunktioner
+function sortByPrice() {
+  pastry.sort((a, b) => a.price - b.price);
+  printPastry();
+}
+
+function sortByRating() {
+  pastry.sort((a, b) => a.rating - b.rating);
+  printPastry();
+}
+
+function sortByLetter() {
+  pastry.sort((a, b) => ('' + a.name).localeCompare(b.name));
+  printPastry();
+}
+
+// Lägger till eventlyssnare för sortering
+sortByPriceBtn.addEventListener('click', sortByPrice);
+sortByRatingBtn.addEventListener('click', sortByRating);
+sortByLetterBtn.addEventListener('click', sortByLetter);
 
 // Ändra mängdfunktioner
 function decreaseAmount(e) {
@@ -270,4 +295,41 @@ function hideOrderConfirmation() {
     .removeEventListener('click', hideOrderConfirmation);
 }
 
-console.log(pastry);
+// Hämta element från id och skapa JS-variabel
+
+const searchIcon = document.querySelector('#search-icon');
+const filterIcon = document.querySelector('#filter-icon');
+const sortIcon = document.querySelector('#sort-icon');
+
+const divSearch = document.querySelector('.search-center');
+const divFilter = document.querySelector('.filter-center');
+const divSort = document.querySelector('.sort-center');
+
+const itemFunctionContainer = document.querySelector(
+  '.item-function-container'
+);
+
+const showSearch = () => {
+  itemFunctionContainer.classList.add('left');
+  divSearch.classList.toggle('show');
+  divFilter.classList.remove('show');
+  divSort.classList.remove('show');
+};
+const showFilter = () => {
+  itemFunctionContainer.classList.add('left');
+  divFilter.classList.toggle('show');
+  divSearch.classList.remove('show');
+  divSort.classList.remove('show');
+};
+const showSort = () => {
+  itemFunctionContainer.classList.add('left');
+  divSort.classList.toggle('show');
+  divFilter.classList.remove('show');
+  divSearch.classList.remove('show');
+};
+
+// Händelselyssnare
+
+searchIcon.addEventListener('click', showSearch);
+filterIcon.addEventListener('click', showFilter);
+sortIcon.addEventListener('click', showSort);
