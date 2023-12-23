@@ -4,7 +4,7 @@ const cartHtmlContainer = document.querySelector('#cart');
 const sortByPriceBtn = document.querySelector('#sortByPrice');
 const sortByRatingBtn = document.querySelector('#sortByRating');
 const sortByLetterBtn = document.querySelector('#sortByLetter');
-const searchItem = document.querySelector('#searchItem');
+const searchItemInput = document.querySelector('#searchItem');
 
 // Importera listan med bakverksprodukter till main.js
 import pastryList from './products.js';
@@ -28,10 +28,28 @@ function sortByLetter() {
   printPastry();
 }
 
+console.log(pastry);
+
+const searchItem = (e) => {
+  const searchItems = document.querySelectorAll('article h3');
+  const searchValue = e.target.value;
+  console.log(searchValue);
+
+  searchItems.forEach((items) => {
+    const itemName = items.firstChild.textContent.toLocaleLowerCase();
+    if (itemName.indexOf(searchValue) !== -1) {
+      items.parentElement.style.display = 'revert';
+    } else {
+      items.parentElement.style.display = 'none';
+    }
+  });
+};
+
 // Lägger till eventlyssnare för sortering
 sortByPriceBtn.addEventListener('click', sortByPrice);
 sortByRatingBtn.addEventListener('click', sortByRating);
 sortByLetterBtn.addEventListener('click', sortByLetter);
+searchItemInput.addEventListener('input', searchItem);
 
 // Ändra mängdfunktioner
 function decreaseAmount(e) {
