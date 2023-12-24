@@ -2,85 +2,143 @@
 const pastry = [
   {
     id: 1,
-    name: 'Bread',
-    price: 20,
+    name: 'Bröd',
+    price: 30,
     images: [
       {
-        src: '/img/bread.jpg',
-        alt: 'Bread',
+        src: 'img/bread.jpg',
+        alt: 'Nybakat ljust bröd',
       },
     ],
     rating: 91,
     amount: 0,
-    category: 'pastry',
+    amount: 0,
+    category: 'bread',
   },
+
   {
     id: 2,
-    name: 'Dark Bread',
+    name: 'Mörkt bröd',
+    price: 40,
+    images: [
+      {
+        src: 'img/dark-bread.jpg',
+        alt: 'Nybakat mörkt bröd',
+      },
+    ],
+    rating: 71,
+    amount: 0,
+    amount: 0,
+    category: 'bread',
+  },
+
+  {
+    id: 3,
+    name: 'Rågbröd',
+    price: 40,
+    images: [
+      {
+        src: 'img/dark-bread.jpg',
+        alt: 'Nybakat rågbröd',
+      },
+    ],
+    rating: 51,
+    amount: 0,
+    category: 'bread',
+  },
+
+  {
+    id: 4,
+    name: 'Kanelbulle',
+    price: 20,
+    images: [
+      {
+        src: 'img/cinnamon-bun.jpg',
+        alt: 'Nybakad kanelbulle.',
+      },
+    ],
+    rating: 66,
+    amount: 0,
+    amount: 0,
+    category: 'fika',
+  },
+
+  {
+    id: 5,
+    name: 'Saffransbulle',
     price: 25,
     images: [
       {
-        src: '/img/dark-bread.jpg',
-        alt: 'Dark Bread',
+        src: 'img/saffron-bun.jpg',
+        alt: 'Nybakad saffransbulle.',
       },
     ],
-    rating: 87,
+    rating: 34,
     amount: 0,
-    category: 'pastry',
+    amount: 0,
+    category: 'fika',
   },
+
   {
-    id: 3,
-    name: 'Cinamon Bun',
-    price: 35,
+    id: 6,
+    name: 'Croissant',
+    price: 20,
     images: [
       {
-        src: '/img/cinnamon-bun.jpg',
-        alt: 'Cinamon Bun',
+        src: 'img/croissant.jpg',
+        alt: 'Nybakad croissant.',
       },
     ],
-    rating: 89,
+    rating: 11,
     amount: 0,
-    category: 'sweet',
+    amount: 0,
+    category: 'fika',
   },
+
   {
-    id: 4,
-    name: 'Saffron bun',
-    price: 10,
+    id: 7,
+    name: 'Födelsedagstårta',
+    price: 200,
     images: [
       {
-        src: '/img/saffron-bun.jpg',
-        alt: 'Saffron bun',
-      },
-    ],
-    rating: 32,
-    amount: 0,
-    category: 'sweet',
-  },
-  {
-    id: 5,
-    name: 'Birthday Cake',
-    price: 180,
-    images: [
-      {
-        src: '/img/birthday-cake.jpg',
-        alt: 'Birthday Cake',
+        src: 'img/birthday-cake.jpg',
+        alt: 'Stor gräddig födelsedagstårta med blommor i.',
       },
     ],
     rating: 54,
     amount: 0,
+    amount: 0,
     category: 'cake',
   },
+
   {
-    id: 6,
-    name: 'Wedding Cake',
-    price: 350,
+    id: 8,
+    name: 'Barnkalastårta',
+    price: 200,
     images: [
       {
-        src: '/img/wedding-cake.jpg',
-        alt: 'Wedding Cake',
+        src: 'img/party-cake.jpg',
+        alt: 'Stor gräddig barnkalastårta.',
       },
     ],
-    rating: 22,
+    rating: 67,
+    amount: 0,
+    amount: 0,
+    category: 'cake',
+  },
+
+  {
+    id: 9,
+    name: 'Bröllopstårta',
+    price: 500,
+    images: [
+      {
+        src: 'img/wedding-cake.jpg',
+        alt: 'Stor gräddig bröllopstårta med blommor i.',
+      },
+    ],
+    rating: 98,
+    amount: 0,
     amount: 0,
     category: 'cake',
   },
