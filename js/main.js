@@ -38,13 +38,22 @@ function increaseAmount(e) {
   printPastry();
 }
 
+// Töm Kundvagnen
+function clearCart() {
+  pastry.forEach((pastryItem) => {
+    pastryItem.amount = 0;
+  });
+  printPastry();
+  printCartpastry();
+}
+
 // Utskriftsfunktion för bakverken
 function printPastry() {
   pastryHtmlContainer.innerHTML = '';
 
   pastry.forEach((pastryItem, index) => {
     const { name, images, price, rating, amount } = pastryItem;
-    
+
     pastryHtmlContainer.innerHTML += `
       <article>
         <h3>${name}</h3>
@@ -61,11 +70,11 @@ function printPastry() {
   const minusBtns = pastryHtmlContainer.querySelectorAll('button.minus');
   const plusBtns = pastryHtmlContainer.querySelectorAll('button.plus');
 
-  minusBtns.forEach(btn => {
+  minusBtns.forEach((btn) => {
     btn.addEventListener('click', decreaseAmount);
   });
 
-  plusBtns.forEach(btn => {
+  plusBtns.forEach((btn) => {
     btn.addEventListener('click', increaseAmount);
   });
 
@@ -78,12 +87,14 @@ function printCartpastry() {
 
   let sum = 0;
 
-  pastry.forEach(pastryItem => {
+  pastry.forEach((pastryItem) => {
     if (pastryItem.amount > 0) {
       sum += pastryItem.amount * pastryItem.price;
       cartHtmlContainer.innerHTML += `
         <article>
-          <span>${pastryItem.amount}st ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr</span>
+          <span>${pastryItem.amount}st ${pastryItem.name} - ${
+        pastryItem.amount * pastryItem.price
+      } kr</span>
         </article>
       `;
 
@@ -94,23 +105,32 @@ function printCartpastry() {
 
   cartHtmlContainer.innerHTML += `
     <img src="/img/shopping-cart.png" alt="Shopping Cart button" width="20" height="20"> <span>Kundvagn</span>
-    <p>Totalsumma: ${sum} kr</p>`;
+    <p>Totalsumma: ${sum} kr</p>
+    <br>
+    <a href="#" id="clear-cart">Rensa kundvagnen</a>
+    `;
+
+  const clearCartButton = document.querySelector('#clear-cart');
+  clearCartButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    clearCart();
+  });
 }
 
 // Utskrift av bakverk
 printPastry();
 
-
 // ------------------------------------------------------------------------------------------
 // ------------------------------------ Kundvagn & beställning ------------------------------
 // ------------------------------------------------------------------------------------------
-
 
 // Hitta HTML-element
 const invoiceDetails = document.querySelector('#invoiceDetails');
 const creditCardDetails = document.querySelector('#creditCardDetails');
 const paymentOptions = document.querySelectorAll('[name="paymentOption"]');
-const inputFields = document.querySelectorAll('form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])');
+const inputFields = document.querySelectorAll(
+  'form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])',
+);
 const popup = document.querySelector('#popup');
 const orderSummary = document.querySelector('#orderSummary');
 
@@ -120,13 +140,13 @@ const resetButton = document.querySelector('#resetForm');
 let invoicePaymentSelected = false;
 
 // Validering av inmatningsfält
-inputFields.forEach(field => {
+inputFields.forEach((field) => {
   field.addEventListener('keyup', validateFormField);
   field.addEventListener('focusout', validateFormField);
 });
 
 // Hantera ändring i betalningsalternativ
-paymentOptions.forEach(radio => {
+paymentOptions.forEach((radio) => {
   radio.addEventListener('change', togglePaymentOptions);
 });
 
@@ -147,7 +167,7 @@ function togglePaymentOptions(e) {
 function validateFormField() {
   let hasErrors = false;
 
-  inputFields.forEach(field => {
+  inputFields.forEach((field) => {
     const errorField = field.previousElementSibling;
     let errorMsg = '';
 
@@ -167,8 +187,8 @@ function validateFormField() {
       case 'lastName':
       case 'street':
       case 'city':
-        case 'mobile':
-        case 'email':
+      case 'mobile':
+      case 'email':
         if (field.value.length === 0) {
           errorMsg = 'Fältet är ej korrekt ifylld!'; // felmeddelande
           hasErrors = true;
@@ -176,7 +196,7 @@ function validateFormField() {
         break;
       case 'ssn':
         const regex = new RegExp(
-          /^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$/
+          /^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$/,
         );
         if (regex.exec(field.value) === null) {
           errorMsg = 'Felaktig Organisationsnummer/Personnummer!'; // felmeddelande
@@ -203,14 +223,17 @@ function validateFormField() {
 // Funktion för att visa beställningsdetaljer i popup-fönstret
 function showOrderSummary() {
   const orderSummary = document.querySelector('#orderSummary');
-  orderSummary.innerHTML = '<button id="closePopup">Stäng fönstret</button><p>Tack för din beställning! Den har nu skickats och är på väg till dig.</p><div class="divider"></div>';
-  
+  orderSummary.innerHTML =
+    '<button id="closePopup">Stäng fönstret</button><p>Tack för din beställning! Den har nu skickats och är på väg till dig.</p><div class="divider"></div>';
+
   const orderList = document.createElement('ul');
 
-  pastry.forEach(pastryItem => {
+  pastry.forEach((pastryItem) => {
     if (pastryItem.amount > 0) {
       const listItem = document.createElement('li');
-      listItem.textContent = `${pastryItem.amount} st ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr`;
+      listItem.textContent = `${pastryItem.amount} st ${pastryItem.name} - ${
+        pastryItem.amount * pastryItem.price
+      } kr`;
       orderList.appendChild(listItem);
     }
   });
@@ -219,7 +242,7 @@ function showOrderSummary() {
 
   // Beräknar totalsumman för alla produkter i kundvagnen
   let totalSum = 0;
-  pastry.forEach(pastryItem => {
+  pastry.forEach((pastryItem) => {
     if (pastryItem.amount > 0) {
       totalSum += pastryItem.amount * pastryItem.price;
     }
@@ -232,7 +255,9 @@ function showOrderSummary() {
   orderList.appendChild(totalListItem);
 
   orderSummary.classList.remove('hidden');
-  document.querySelector('#closePopup').addEventListener('click', hideOrderConfirmation);
+  document
+    .querySelector('#closePopup')
+    .addEventListener('click', hideOrderConfirmation);
 }
 
 // Skicka formulär
@@ -240,7 +265,9 @@ function sendForm() {
   popup.classList.remove('hidden');
   showOrderSummary();
   popup.addEventListener('click', hideOrderConfirmation);
-  document.querySelector('#closePopup').addEventListener('click', hideOrderConfirmation);
+  document
+    .querySelector('#closePopup')
+    .addEventListener('click', hideOrderConfirmation);
 }
 
 // Återställ formulärfält
@@ -258,8 +285,8 @@ function resetFormFields() {
   document.getElementById('ssn').value = '';
 
   const errorFields = document.querySelectorAll('.errorField');
-  errorFields.forEach(field => {
-    field.textContent = ''; 
+  errorFields.forEach((field) => {
+    field.textContent = '';
   });
 
   hideOrderConfirmation();
@@ -273,6 +300,7 @@ function hideOrderConfirmation() {
   popup.classList.add('hidden');
   orderSummary.classList.add('hidden');
   popup.removeEventListener('click', hideOrderConfirmation);
-  document.querySelector('#closePopup').removeEventListener('click', hideOrderConfirmation);
+  document
+    .querySelector('#closePopup')
+    .removeEventListener('click', hideOrderConfirmation);
 }
-
