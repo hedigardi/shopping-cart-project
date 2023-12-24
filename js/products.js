@@ -38,7 +38,7 @@ const pastry = [
     price: 40,
     images: [
       {
-        src: 'img/dark-bread.jpg',
+        src: 'img/rye-bread.jpg',
         alt: 'Nybakat rågbröd',
       },
     ],
