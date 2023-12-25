@@ -22,20 +22,19 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag** skapat ett test-projekt för att öva på att manipulera arrayer. Jag har också kikat på munkshop övningen.
 
-**Ett problem jag har**
+**Ett problem jag har** är att se hur jag kan korta ner min kod på smarta sätt. Det blir väldigt mycket upprepningar när jag skriver kod.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att förstå när man kan korta ner och skapa funktioner av upprepningar och när det faktiskt behöver vara separata rader kod.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** hur man kan använda ”index” i forEach loopar vilket löste många funderingar hos mig.
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag** på helgen Jenny munkshop  ---shopping cart och formular . Michaels  JS dagens lectioner
 
-**Ett problem jag har**
+**Ett problem jag har**  provar anropa shopping cart from 2.html  som skapad på index.html med dynamisk JS  ---funkar inte --- förståd inte hur det sparas i vilken minne .
+**Jag behöver hjälp med**     hur det sparas i vilken minne dem andringar som vi görd i Product array .
 
-**Jag behöver hjälp med**
-
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** att leka med dynamisk JS,  hämta , lägga class , id och mm . Shopping list from Michael 

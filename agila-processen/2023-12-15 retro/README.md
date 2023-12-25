@@ -23,13 +23,13 @@ funktioner är lätta med css men svåra i en dynamisk js-variant.
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag** 
+**Idag har jag** övat på att dynamiskt skapa innehåll på en webbsida och genom att skapa html element genom js och använda och visa data från arrayer.
 
-**Ett problem jag har** 
+**Ett problem jag har** är att förstå hur och när argument ska användas i funktioner och när inget argument ska anges.
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med** hur man använder ett objekt inuti ett objekt i en array.
 
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig** hur en vanlig js-funktion kan skrivas om till en arrow-funktion.
 
 ## Namn: Nataliya Lisjö
 

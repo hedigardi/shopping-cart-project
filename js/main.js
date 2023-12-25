@@ -109,6 +109,15 @@ function increaseAmount(e) {
   printPastry();
 }
 
+// Töm Kundvagnen
+function clearCart() {
+  pastry.forEach((pastryItem) => {
+    pastryItem.amount = 0;
+  });
+  printPastry();
+  printCartpastry();
+}
+
 // Utskriftsfunktion för bakverken
 function printPastry() {
   pastryHtmlContainer.innerHTML = '';
@@ -167,7 +176,16 @@ function printCartpastry() {
 
   cartHtmlContainer.innerHTML += `
     <img src="/img/shopping-cart.png" alt="Shopping Cart button" width="20" height="20"> <span>Kundvagn</span>
-    <p>Totalsumma: ${sum} kr</p>`;
+    <p>Totalsumma: ${sum} kr</p>
+    <br>
+    <a href="#" id="clear-cart">Rensa kundvagnen</a>
+    `;
+
+  const clearCartButton = document.querySelector('#clear-cart');
+  clearCartButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    clearCart();
+  });
 }
 
 // Utskrift av bakverk
@@ -183,6 +201,7 @@ const creditCardDetails = document.querySelector('#creditCardDetails');
 const paymentOptions = document.querySelectorAll('[name="paymentOption"]');
 const inputFields = document.querySelectorAll(
   'form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])'
+
 );
 const popup = document.querySelector('#popup');
 const orderSummary = document.querySelector('#orderSummary');
@@ -249,7 +268,7 @@ function validateFormField() {
         break;
       case 'ssn':
         const regex = new RegExp(
-          /^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$/
+          /^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$/,
         );
         if (regex.exec(field.value) === null) {
           errorMsg = 'Felaktig Organisationsnummer/Personnummer!'; // felmeddelande

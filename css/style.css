@@ -367,6 +367,14 @@ h2 {
   margin-bottom: 20px;
 }
 
+#clear-cart {
+  color: #edc29d;
+}
+
+#clear-cart {
+  color: white;
+}
+
 *,
 *::before,
 *::after {
