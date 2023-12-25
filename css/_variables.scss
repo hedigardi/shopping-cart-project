@@ -1,16 +1,16 @@
-
 // google font
-$font-primary: 'Roboto', sans-serif;   
+$font-primary: 'Roboto', sans-serif;
 
 
 // primary colors
-$beige: beige ; 
-$green:  rgb(21, 138, 62) ;  
-$red:    #7b1a1a ; 
-$white:  #ffffff  ;  
-  
+$beige: #fcfdef;
+$green: #04aa44;
+$red: #ce0909;
+$white: #ffffff;
+$color-primary-light: #3d2d3a;
+$color-primary: #edc29d;
+
 
 @function rem($size) {
     @return calc($size / 16) * 1rem;
- } 
- // unroppa 
+}
