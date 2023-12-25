@@ -49,8 +49,10 @@ const pastry = [
 
   {
     id: 4,
+
     name: 'Kanelbulle',
     price: 20,
+
     images: [
       {
         src: 'img/cinnamon-bun.jpg',
