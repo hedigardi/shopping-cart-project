@@ -22,13 +22,13 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag** arbetat vidare med sorterings- och sökfunktioner och gjort klart dessa.
 
-**Ett problem jag har**
+**Ett problem jag har** är att en del av min kod är upprepningar men det är mycket svårt att se hur jag ska förenkla den. 
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att förstå när upprepad kod kan göras om till en funktion och när den behöver arbetas om i grunden.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** ett sätt att sortera en lista i bokstavsordning.
 
 ## Namn: Nataliya Lisjö
 
