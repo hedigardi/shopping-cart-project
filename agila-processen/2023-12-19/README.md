@@ -22,13 +22,13 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag** arbetat vidare med munkshop övningen för att träna på JS.
 
-**Ett problem jag har**
+**Ett problem jag har** är att förstå i vilken ordning alla variabler och funktioner ska skrivas. Det går att testa sig fram men jag skulle vilja förstå det innan.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** if funktioner som har mer än 1 argument.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** att skapa variabler till funktioner enbart med syftet att göra koden mer begriplig att läsa av.
 
 ## Namn: Nataliya Lisjö
 
