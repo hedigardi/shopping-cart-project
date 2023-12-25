@@ -22,13 +22,13 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag** skapat ett test-projekt för att öva på att manipulera arrayer. Jag har också kikat på munkshop övningen.
 
-**Ett problem jag har**
+**Ett problem jag har** är att se hur jag kan korta ner min kod på smarta sätt. Det blir väldigt mycket upprepningar när jag skriver kod.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att förstå när man kan korta ner och skapa funktioner av upprepningar och när det faktiskt behöver vara separata rader kod.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** hur man kan använda ”index” i forEach loopar vilket löste många funderingar hos mig.
 
 ## Namn: Nataliya Lisjö
 
