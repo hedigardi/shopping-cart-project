@@ -199,10 +199,7 @@ printPastry();
 const invoiceDetails = document.querySelector('#invoiceDetails');
 const creditCardDetails = document.querySelector('#creditCardDetails');
 const paymentOptions = document.querySelectorAll('[name="paymentOption"]');
-const inputFields = document.querySelectorAll(
-  'form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])'
-
-);
+const inputFields = document.querySelectorAll('form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])');
 const popup = document.querySelector('#popup');
 const orderSummary = document.querySelector('#orderSummary');
 
