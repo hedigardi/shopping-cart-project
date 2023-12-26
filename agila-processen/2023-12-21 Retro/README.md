@@ -32,10 +32,10 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag**  arbetade med att skapa dynamisk product -card som skapade rent js in funktion med flera atributer(name, image, price, index), anropa den function på rätt place 
 
-**Ett problem jag har**
+**Ett problem jag har**  <img> kan inte visa bild , web sida uppdateras inte efter lägga amount +,-  , men in variable det gör
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med**  img -fortfarande funkar inte som det ska
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig**   createAttribute, setAttributeNode, hittade fel med uppdatering websida efter amount ändras 
