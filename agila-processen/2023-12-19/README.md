@@ -32,10 +32,10 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag**  trännade JS efter Michael lection att skapa med js card block 
 
-**Ett problem jag har**
+**Ett problem jag har**  SetAttribut("data-id") och insert value in it 
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med**   hittad lössning på  //www.w3schools.com/
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** hur man skapa dynamisk variant av product card utan HTML code 
