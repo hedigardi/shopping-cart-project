@@ -16,7 +16,7 @@
 
   <header>
     <div class="container">
-      <h1 class="name">Mormor Dagnys Bageri</h1>
+      <h1 class="name" id="orderForm">Beställning</h1>
     </div>
     <div id="cart"></div>
     <div class="navigation">
@@ -38,7 +38,88 @@
     </div>
   </header>
   <main>
-    <section class="sort-filter-search">
+    <div class="order-form">
+      <div class="divider">Kundvagn & beställning</div>
+      <form>
+        <label>Förnamn:
+          <span class="errorField"></span>
+          <input type="text" id="firstName" placeholder="Förnamn">
+        </label>
+        <label>Efternamn:
+          <span class="errorField"></span>
+          <input type="text" id="lastName" placeholder="Efternamn">
+        </label>
+        <label>Adress:
+          <span class="errorField"></span>
+          <input type="text" id="street" placeholder="Adress">
+        </label>
+        <label>Postnummer:
+          <span class="errorField"></span>
+          <input type="number" id="zipcode" placeholder="Postnummer">
+        </label>
+        <label>Postort:
+          <span class="errorField"></span>
+          <input type="text" id="city" placeholder="Postort">
+        </label>
+        <label>Ev.Portkod/Dörkod:
+          <span class="errorField"></span>
+          <input type="text" id="doorCode" placeholder="Ev.Portkod/Dörkod">
+        </label>
+        <label>Telefonnummer:
+          <span class="errorField"></span>
+          <input type="tel" id="mobile" placeholder="Telefonnummer">
+        </label>
+        <label>E-mail:
+          <span class="errorField"></span>
+          <input type="email" id="email" placeholder="E-mail">
+        </label>
+
+        <div>
+          <label>
+            <input type="radio" name="paymentOption" value="card"> Betalkort/kreditkort
+          </label>
+          <label>
+            <input type="radio" name="paymentOption" value="invoice"> Faktura
+          </label>
+        </div>
+
+        <div id="creditCardDetails" class="hidden">
+          <label>
+            Kortnummer:
+            <input type="number" id="cardNumber" placeholder="Kortnummer">
+          </label>
+          <label>
+            Utgångsdatum (MM/ÅÅ):
+            <input type="number" id="expiryMonth" placeholder="MM">
+            <input type="number" id="expiryYear" placeholder="ÅÅ">
+          </label>
+        </div>
+
+        <div id="invoiceDetails" class="hidden">
+          <label>
+            Organisationsnummer/Personnummer:
+            <span class="errorField"></span>
+            <input type="text" id="ssn" placeholder="Organisationsnummer/Personnummer">
+          </label>
+        </div>
+
+        <label>
+          <input type="checkbox" id="gdprCheck"> Godkännande av behandling av personuppgifter
+        </label>
+
+        <label>
+          <input type="checkbox" id="newsletter" checked> Nyhetsbrevet
+        </label>
+
+        <input type="button" id="resetForm" value="Återställ" class="reset-btn">
+        <input type="button" id="sendForm" value="Skicka beställning" disabled class="send-btn">
+      </form>
+
+      <div id="popup" class="cover hidden"></div>
+      <div class="popup hidden" id="orderSummary"></div>
+    </div>
+
+    <section class="order-sort-filter-search">
       <div class="item-function-container">
         <span class="material-symbols-outlined" id="search-icon" title="Search">search</span>
         <span class="material-symbols-outlined" id="filter-icon" title="Filter">filter_list</span>
@@ -53,13 +134,13 @@
         <div class="sort-buttons">
           <div class="filter-center">
             <button id="filterBread"><span class="material-symbols-outlined">
-              breakfast_dining
+                breakfast_dining
               </span></button>
             <button id="filterCake"><span class="material-symbols-outlined">
-              cake
+                cake
               </span></button>
             <button id="filterBun"><span class="material-symbols-outlined">
-              bakery_dining
+                bakery_dining
               </span></button>
           </div>
         </div>
@@ -67,22 +148,18 @@
           <div class="sort-center">
             <button id="sortByLetter"><span class="material-symbols-outlined">abc</span></button>
             <button id="sortByPrice"><span class="material-symbols-outlined">
-              monetization_on
+                monetization_on
               </span></button>
             <button id="sortByRating"><span class="material-symbols-outlined">
-              star_rate
+                star_rate
               </span></button>
           </div>
         </div>
       </div>
     </section>
 
-    <div id="pastryContainer"></div>
+    <div id="pastryContainer" class="order-hide-element"></div>
 
-    <div class="order-form">
-      <div id="popup" class="cover hidden"></div>
-      <div class="popup hidden" id="orderSummary"></div>
-    </div>
   </main>
 
   <footer>
@@ -98,11 +175,12 @@
         <h2>Kontakt</h2>
         <p>Vårfruggatan 8</p>
         <p>223 50, Lund</p>
-        <a href="tel:046-590 08 97">046-590 08 97</a>
+        <a href="tel:046-590 08 97">046-590 08 97 </a>
         <a href="mailto:info@mormors.se">info@mormors.se</a>
       </address>
     </div>
   </footer>
   <script type="module" src="js/main.js"></script>
-  </body>
+</body>
+
 </html>
