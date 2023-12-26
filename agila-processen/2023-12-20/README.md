@@ -32,10 +32,10 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag**  JS övningar  append child   , repitera Michael lectioner
 
-**Ett problem jag har**
+**Ett problem jag har** efter lectioner förstör alt men när börjar implementera in web sida , helt haos
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** hur man använder debuger in browser for att controlera flöde och söka fel
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** hitta element med olika metoder , child - parent koppling , sibling(),   hur man använder debuger in browser for att controlera flöde och söka fel
