@@ -22,13 +22,13 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag** arbetat med att integrera det jag lärt mig i munkshop övningen i Bageriuppgiften och försökt applicera den koden i vårt projekt för att skapa nödvändiga funktioner.
 
-**Ett problem jag har**
+**Ett problem jag har** är att komma ihåg shorthand ”operatorer” som += <= etc.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att få till styling på elementen som jag lägger till med innerHTML.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** att använda Math.round för att avrunda tal.
 
 ## Namn: Nataliya Lisjö
 
