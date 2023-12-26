@@ -110,6 +110,10 @@ label > span {
   text-align: center;
 }
 
+.minus {
+  margin-right: 0.5rem;
+}
+
 .total-sum-style {
   color: #3d2d3a;
   font-weight: bold;
@@ -350,6 +354,7 @@ h2 {
   display: flex;
   align-items: center;
   padding-bottom: 1rem;
+  padding-top: 2rem;
 }
 
 .divider::before,
@@ -373,8 +378,16 @@ h2 {
   color: #edc29d;
 }
 
-#clear-cart {
-  color: white;
+#order-cart {
+  color: #edc29d;
+}
+
+.order-hide-element {
+  display: none !important;
+}
+
+.order-sort-filter-search {
+  display: none !important;
 }
 
 *,
@@ -595,6 +608,10 @@ label > span {
   overflow: auto;
   line-height: 1.8;
   text-align: center;
+}
+
+.minus {
+  margin-right: 0.5rem;
 }
 
 .total-sum-style {

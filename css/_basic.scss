@@ -170,6 +170,7 @@ h2 {
   display: flex;
   align-items: center;
   padding-bottom: 1rem;
+  padding-top: 2rem;
 }
 
 .divider::before,
@@ -193,6 +194,14 @@ h2 {
   color: $color-primary;
 }
 
-#clear-cart {
-  color: white;
+#order-cart {
+  color: $color-primary;
+}
+
+.order-hide-element {
+  display: none !important;
+}
+
+.order-sort-filter-search {
+  display: none !important;
 }

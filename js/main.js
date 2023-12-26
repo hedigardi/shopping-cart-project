@@ -1,4 +1,4 @@
-// Hitta HTML-element
+// HÄMTA HTML ELEMENT
 const pastryHtmlContainer = document.querySelector('#pastryContainer');
 const cartHtmlContainer = document.querySelector('#cart');
 const sortByPriceBtn = document.querySelector('#sortByPrice');
@@ -8,14 +8,29 @@ const searchItemInput = document.querySelector('#searchItem');
 const filterBreadBtn = document.querySelector('#filterBread');
 const filterBunBtn = document.querySelector('#filterBun');
 const filterCakeBtn = document.querySelector('#filterCake');
+const invoiceDetails = document.querySelector('#invoiceDetails');
+const creditCardDetails = document.querySelector('#creditCardDetails');
+const paymentOptions = document.querySelectorAll('[name="paymentOption"]');
+const inputFields = document.querySelectorAll('form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])',);
+const popup = document.querySelector('#popup');
+const orderSummary = document.querySelector('#orderSummary');
+const orderBtn = document.querySelector('#sendForm');
+const resetButton = document.querySelector('#resetForm');
+const searchIcon = document.querySelector('#search-icon');
+const filterIcon = document.querySelector('#filter-icon');
+const sortIcon = document.querySelector('#sort-icon');
+const divSearch = document.querySelector('.search-center');
+const divFilter = document.querySelector('.filter-center');
+const divSort = document.querySelector('.sort-center');
+const itemFunctionContainer = document.querySelector('.item-function-container',);
 
-// Importera listan med bakverksprodukter till main.js
+// IMPORTERA PRODUKTER TILL MAIN.JS
 import pastryList from './products.js';
 
-// Bakverksprodukter
-const pastry = pastryList;
+// BAKVERK
+let pastry = pastryList;
 
-// Sorteringsfunktioner
+// SORTERING
 function sortByPrice() {
   pastry.sort((a, b) => a.price - b.price);
   printPastry();
@@ -31,362 +46,47 @@ function sortByLetter() {
   printPastry();
 }
 
+// SÖKNING
 const searchItem = (e) => {
   const searchItems = document.querySelectorAll('article h3');
-  const searchValue = e.target.value;
+  const searchValue = e.target.value.toLowerCase();
 
-  searchItems.forEach((items) => {
-    const itemName = items.firstChild.textContent.toLocaleLowerCase();
+  searchItems.forEach((item) => {
+    const itemName = item.firstChild.textContent.toLowerCase();
     if (itemName.indexOf(searchValue) !== -1) {
-      items.parentElement.style.display = 'revert';
+      item.parentElement.style.display = '';
     } else {
-      items.parentElement.style.display = 'none';
+      item.parentElement.style.display = 'none';
     }
   });
 };
 
+// FILTRERING
 const filterBread = () => {
-  const filterItems = document.querySelectorAll('article h3');
-
-  filterItems.forEach((items) => {
-    const filterName = items.firstChild.textContent;
-
-    if (filterName.indexOf('Bread') !== -1) {
-      items.parentElement.style.display = 'revert';
-    } else {
-      items.parentElement.style.display = 'none';
-    }
-  });
+  filterPastry('Bread');
 };
 
 const filterBun = () => {
-  const filterItems = document.querySelectorAll('article h3');
-
-  filterItems.forEach((items) => {
-    const filterName = items.firstChild.textContent;
-
-    if (filterName.indexOf('Bun') !== -1) {
-      items.parentElement.style.display = 'revert';
-    } else {
-      items.parentElement.style.display = 'none';
-    }
-  });
+  filterPastry('Bun');
 };
 
 const filterCake = () => {
-  const filterItems = document.querySelectorAll('article h3');
-
-  filterItems.forEach((items) => {
-    const filterName = items.firstChild.textContent;
-
-    if (filterName.indexOf('Cake') !== -1) {
-      items.parentElement.style.display = 'revert';
-    } else {
-      items.parentElement.style.display = 'none';
-    }
-  });
+  filterPastry('Cake');
 };
 
-// Lägger till eventlyssnare för sortering
-sortByPriceBtn.addEventListener('click', sortByPrice);
-sortByRatingBtn.addEventListener('click', sortByRating);
-sortByLetterBtn.addEventListener('click', sortByLetter);
-searchItemInput.addEventListener('input', searchItem);
-filterBreadBtn.addEventListener('click', filterBread);
-filterBunBtn.addEventListener('click', filterBun);
-filterCakeBtn.addEventListener('click', filterCake);
+function filterPastry(filterName) {
+  const filterItems = document.querySelectorAll('article h3');
 
-// Ändra mängdfunktioner
-function decreaseAmount(e) {
-  const index = e.currentTarget.dataset.id;
-  pastry[index].amount = Math.max(0, pastry[index].amount - 1);
-  printPastry();
-}
+  filterItems.forEach((item) => {
+    const itemName = item.firstChild.textContent;
 
-function increaseAmount(e) {
-  const index = e.currentTarget.dataset.id;
-  pastry[index].amount += 1;
-  printPastry();
-}
-
-// Töm Kundvagnen
-function clearCart() {
-  pastry.forEach((pastryItem) => {
-    pastryItem.amount = 0;
-  });
-  printPastry();
-  printCartpastry();
-}
-
-// Utskriftsfunktion för bakverken
-function printPastry() {
-  pastryHtmlContainer.innerHTML = '';
-
-  pastry.forEach((pastryItem, index) => {
-    const { name, images, price, rating, amount } = pastryItem;
-
-    pastryHtmlContainer.innerHTML += `
-      <article>
-        <h3>${name}</h3>
-        <img src="${images[0].src}" alt="${images[0].alt}">
-        <div>Pris: <span>${price}</span> kr</div>
-        <div>Omdöme: <span>${rating}</span></div>
-        <div>Antal: <span>${amount}</span></div>
-        <button class="minus" data-id="${index}">-</button>
-        <button class="plus" data-id="${index}">+</button>
-      </article>
-    `;
-  });
-
-  const minusBtns = pastryHtmlContainer.querySelectorAll('button.minus');
-  const plusBtns = pastryHtmlContainer.querySelectorAll('button.plus');
-
-  minusBtns.forEach((btn) => {
-    btn.addEventListener('click', decreaseAmount);
-  });
-
-  plusBtns.forEach((btn) => {
-    btn.addEventListener('click', increaseAmount);
-  });
-
-  printCartpastry();
-}
-
-// Utskriftsfunktion för lilla hörn kundvagnen
-function printCartpastry() {
-  cartHtmlContainer.innerHTML = '';
-
-  let sum = 0;
-
-  pastry.forEach((pastryItem) => {
-    if (pastryItem.amount > 0) {
-      sum += pastryItem.amount * pastryItem.price;
-      cartHtmlContainer.innerHTML += `
-        <article>
-          <span>${pastryItem.amount}st ${pastryItem.name} - ${
-        pastryItem.amount * pastryItem.price
-      } kr</span>
-        </article>
-      `;
-
-      // Lägger till innehållet från 'cart div' till 'orderSummary div
-      orderSummary.innerHTML += cartHtmlContainer.innerHTML;
+    if (itemName.indexOf(filterName) !== -1) {
+      item.parentElement.style.display = '';
+    } else {
+      item.parentElement.style.display = 'none';
     }
   });
-
-  cartHtmlContainer.innerHTML += `
-    <img src="/img/shopping-cart.png" alt="Shopping Cart button" width="20" height="20"> <span>Kundvagn</span>
-    <p>Totalsumma: ${sum} kr</p>
-    <br>
-    <a href="#" id="clear-cart">Rensa kundvagnen</a>
-    `;
-
-  const clearCartButton = document.querySelector('#clear-cart');
-  clearCartButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    clearCart();
-  });
 }
-
-// Utskrift av bakverk
-printPastry();
-
-// ------------------------------------------------------------------------------------------
-// ------------------------------------ Kundvagn & beställning ------------------------------
-// ------------------------------------------------------------------------------------------
-
-// Hitta HTML-element
-const invoiceDetails = document.querySelector('#invoiceDetails');
-const creditCardDetails = document.querySelector('#creditCardDetails');
-const paymentOptions = document.querySelectorAll('[name="paymentOption"]');
-const inputFields = document.querySelectorAll('form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])');
-const popup = document.querySelector('#popup');
-const orderSummary = document.querySelector('#orderSummary');
-
-const orderBtn = document.querySelector('#sendForm');
-const resetButton = document.querySelector('#resetForm');
-
-let invoicePaymentSelected = false;
-
-// Validering av inmatningsfält
-inputFields.forEach((field) => {
-  field.addEventListener('keyup', validateFormField);
-  field.addEventListener('focusout', validateFormField);
-});
-
-// Hantera ändring i betalningsalternativ
-paymentOptions.forEach((radio) => {
-  radio.addEventListener('change', togglePaymentOptions);
-});
-
-// Hantera växling av betalningsalternativ
-function togglePaymentOptions(e) {
-  if (e.currentTarget.value === 'invoice') {
-    invoiceDetails.classList.remove('hidden');
-    creditCardDetails.classList.add('hidden');
-    invoicePaymentSelected = true;
-  } else {
-    invoiceDetails.classList.add('hidden');
-    creditCardDetails.classList.remove('hidden');
-    invoicePaymentSelected = false;
-  }
-}
-
-// Valideringsfunktion för formulärfält
-function validateFormField() {
-  let hasErrors = false;
-
-  inputFields.forEach((field) => {
-    const errorField = field.previousElementSibling;
-    let errorMsg = '';
-
-    if (errorField !== null) {
-      errorField.innerHTML = '';
-    }
-
-    // Validering av olika fält...
-    switch (field.id) {
-      case 'zipcode':
-        if (field.value.length != 5) {
-          errorMsg = 'Fältet är ej korrekt ifylld!'; // felmeddelande
-          hasErrors = true;
-        }
-        break;
-      case 'firstName':
-      case 'lastName':
-      case 'street':
-      case 'city':
-      case 'mobile':
-      case 'email':
-        if (field.value.length === 0) {
-          errorMsg = 'Fältet är ej korrekt ifylld!'; // felmeddelande
-          hasErrors = true;
-        }
-        break;
-      case 'ssn':
-        const regex = new RegExp(
-          /^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$/,
-        );
-        if (regex.exec(field.value) === null) {
-          errorMsg = 'Felaktig Organisationsnummer/Personnummer!'; // felmeddelande
-          hasErrors = true;
-        }
-        break;
-    }
-
-    if (errorField !== null) {
-      errorField.innerHTML = errorMsg;
-    }
-  });
-
-  // Aktivera/inaktivera skicka-knappen baserat på validering
-  if (hasErrors) {
-    document.querySelector('#sendForm').setAttribute('disabled', 'disabled');
-    orderBtn.removeEventListener('click', sendForm);
-  } else {
-    document.querySelector('#sendForm').removeAttribute('disabled');
-    orderBtn.addEventListener('click', sendForm);
-  }
-}
-
-// Funktion för att visa beställningsdetaljer i popup-fönstret
-function showOrderSummary() {
-  const orderSummary = document.querySelector('#orderSummary');
-  orderSummary.innerHTML =
-    '<button id="closePopup">Stäng fönstret</button><p>Tack för din beställning! Den har nu skickats och är på väg till dig.</p><div class="divider"></div>';
-
-  const orderList = document.createElement('ul');
-
-  pastry.forEach((pastryItem) => {
-    if (pastryItem.amount > 0) {
-      const listItem = document.createElement('li');
-      listItem.textContent = `${pastryItem.amount} st ${pastryItem.name} - ${
-        pastryItem.amount * pastryItem.price
-      } kr`;
-      orderList.appendChild(listItem);
-    }
-  });
-
-  orderSummary.appendChild(orderList);
-
-  // Beräknar totalsumman för alla produkter i kundvagnen
-  let totalSum = 0;
-  pastry.forEach((pastryItem) => {
-    if (pastryItem.amount > 0) {
-      totalSum += pastryItem.amount * pastryItem.price;
-    }
-  });
-
-  // Lägger till totalsumman i orderöversikten
-  const totalListItem = document.createElement('li');
-  totalListItem.textContent = `Totalsumma: ${totalSum} kr`;
-  totalListItem.classList.add('total-sum-style');
-  orderList.appendChild(totalListItem);
-
-  orderSummary.classList.remove('hidden');
-  document
-    .querySelector('#closePopup')
-    .addEventListener('click', hideOrderConfirmation);
-}
-
-// Skicka formulär
-function sendForm() {
-  popup.classList.remove('hidden');
-  showOrderSummary();
-  popup.addEventListener('click', hideOrderConfirmation);
-  document
-    .querySelector('#closePopup')
-    .addEventListener('click', hideOrderConfirmation);
-}
-
-// Återställ formulärfält
-function resetFormFields() {
-  document.getElementById('firstName').value = '';
-  document.getElementById('lastName').value = '';
-  document.getElementById('street').value = '';
-  document.getElementById('zipcode').value = '';
-  document.getElementById('city').value = '';
-  document.getElementById('mobile').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('cardNumber').value = '';
-  document.getElementById('expiryMonth').value = '';
-  document.getElementById('expiryYear').value = '';
-  document.getElementById('ssn').value = '';
-
-  const errorFields = document.querySelectorAll('.errorField');
-  errorFields.forEach((field) => {
-    field.textContent = '';
-  });
-
-  hideOrderConfirmation();
-}
-
-// Återställning vid reset-knapptryck
-resetButton.addEventListener('click', resetFormFields);
-
-// Göm orderbekräftelse-popup
-function hideOrderConfirmation() {
-  popup.classList.add('hidden');
-  orderSummary.classList.add('hidden');
-  popup.removeEventListener('click', hideOrderConfirmation);
-  document
-    .querySelector('#closePopup')
-    .removeEventListener('click', hideOrderConfirmation);
-}
-
-// Hämta element från id och skapa JS-variabel
-
-const searchIcon = document.querySelector('#search-icon');
-const filterIcon = document.querySelector('#filter-icon');
-const sortIcon = document.querySelector('#sort-icon');
-
-const divSearch = document.querySelector('.search-center');
-const divFilter = document.querySelector('.filter-center');
-const divSort = document.querySelector('.sort-center');
-
-const itemFunctionContainer = document.querySelector(
-  '.item-function-container'
-);
 
 const showSearch = () => {
   itemFunctionContainer.classList.add('left');
@@ -407,8 +107,376 @@ const showSort = () => {
   divSearch.classList.remove('show');
 };
 
-// Händelselyssnare
+// ÄNDRA ANTAL VAROR
+function decreaseAmount(index) {
+  pastry[index].amount = Math.max(0, pastry[index].amount - 1);
+  printPastry();
+  updatePastryInStorage();
+}
 
+function increaseAmount(index) {
+  pastry[index].amount += 1;
+  printPastry();
+  updatePastryInStorage();
+}
+
+// TÖM KUNDVAGN
+function clearCart() {
+  pastry.forEach((pastryItem) => {
+    pastryItem.amount = 0;
+  });
+  printPastry();
+  printCartpastry();
+  updatePastryInStorage();
+}
+
+// PRINT BAKVERK
+function printPastry() {
+  pastryHtmlContainer.innerHTML = '';
+
+  pastry.forEach((pastryItem, index) => {
+    const { name, images, price, rating, amount } = pastryItem;
+
+    const article = document.createElement('article');
+    const h3 = document.createElement('h3');
+    const img = document.createElement('img');
+    const priceDiv = document.createElement('div');
+    const ratingDiv = document.createElement('div');
+    const amountDiv = document.createElement('div');
+    const minusBtn = document.createElement('button');
+    const plusBtn = document.createElement('button');
+
+    h3.textContent = name;
+    img.src = images[0].src;
+    img.alt = images[0].alt;
+    priceDiv.innerHTML = `Price: <span>${price}</span> kr`;
+    ratingDiv.innerHTML = `Rating: <span>${rating}</span>`;
+    amountDiv.innerHTML = `Amount: <span>${amount}</span>`;
+    minusBtn.textContent = '-';
+    minusBtn.classList.add('minus');
+    minusBtn.dataset.id = index;
+    plusBtn.textContent = '+';
+    plusBtn.classList.add('plus');
+    plusBtn.dataset.id = index;
+
+    minusBtn.addEventListener('click', () => decreaseAmount(index));
+    plusBtn.addEventListener('click', () => increaseAmount(index));
+    plusBtn.addEventListener('click', () => addToCart(index));
+
+    article.appendChild(h3);
+    article.appendChild(img);
+    article.appendChild(priceDiv);
+    article.appendChild(ratingDiv);
+    article.appendChild(amountDiv);
+    article.appendChild(minusBtn);
+    article.appendChild(plusBtn);
+
+    pastryHtmlContainer.appendChild(article);
+  });
+
+  const minusBtns = pastryHtmlContainer.querySelectorAll('button.minus');
+  const plusBtns = pastryHtmlContainer.querySelectorAll('button.plus');
+
+  minusBtns.forEach((btn) => {
+    btn.addEventListener('click', () => decreaseAmount(btn.dataset.id));
+  });
+
+  plusBtns.forEach((btn) => {
+    btn.addEventListener('click', () => increaseAmount(btn.dataset.id));
+    btn.addEventListener('click', () => addToCart(btn.dataset.id));
+  });
+
+  printCartpastry();
+}
+
+// KUNDVAGN
+function printCartpastry() {
+  cartHtmlContainer.innerHTML = '';
+  let sum = 0;
+  const cartContent = document.createDocumentFragment();
+
+  pastry.forEach((pastryItem) => {
+    if (pastryItem.amount > 0) {
+      sum += pastryItem.price * pastryItem.amount;
+
+      const article = document.createElement('article');
+      const span = document.createElement('span');
+      span.textContent = `${pastryItem.amount}st ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr`;
+      article.appendChild(span);
+      cartContent.appendChild(article);
+    }
+  });
+
+  const cartImage = document.createElement('img');
+  cartImage.src = '/img/shopping-cart.png';
+  cartImage.alt = 'Shopping Cart button';
+  cartImage.width = 20;
+  cartImage.height = 20;
+  cartContent.appendChild(cartImage);
+
+  const cartSpan = document.createElement('span');
+  cartSpan.textContent = 'Kundvagn';
+  cartContent.appendChild(cartSpan);
+
+  const totalPrice = document.createElement('p');
+  totalPrice.textContent = `Att Betala: ${sum} kr`;
+  cartContent.appendChild(totalPrice);
+
+  const lineBreak = document.createElement('br');
+  cartContent.appendChild(lineBreak);
+
+  const clearCartLink = document.createElement('a');
+  clearCartLink.href = '';
+  clearCartLink.id = 'clear-cart';
+  clearCartLink.textContent = 'Töm Kundvagnen';
+  clearCartLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    clearCart();
+  });
+  cartContent.appendChild(clearCartLink);
+
+  cartContent.appendChild(lineBreak);
+
+  const orderLink = document.createElement('a');
+  orderLink.href = 'order.html#orderForm';
+  orderLink.id = 'order-cart';
+  orderLink.textContent = 'Beställ';
+  cartContent.appendChild(orderLink);
+
+  cartHtmlContainer.appendChild(cartContent);
+
+  printOrderSummary();
+}
+
+// PRINT ORDER TOTAL
+function printOrderSummary() {
+  const orderSummary = document.querySelector('#orderSummary');
+  orderSummary.innerHTML = '';
+
+  pastry.forEach((pastryItem) => {
+    if (pastryItem.amount > 0) {
+      const article = document.createElement('article');
+      const span = document.createElement('span');
+
+      span.textContent = `${pastryItem.amount}pcs ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr`;
+
+      article.appendChild(span);
+      orderSummary.appendChild(article);
+    }
+  });
+
+  const totalAmount = pastry.reduce(
+    (acc, pastryItem) => acc + pastryItem.price * pastryItem.amount,
+    0,
+  );
+
+  // LAGRING AV BAKVERK I LOCAL STORAGE
+  updatePastryInStorage();
+}
+
+// UPPDATERA ARRAY I LOCAL STORAGE
+function updatePastryInStorage() {
+  const cartItems = pastry.filter((pastryItem) => pastryItem.amount > 0);
+  const pastryString = JSON.stringify(pastry);
+  localStorage.setItem('pastryList', pastryString);
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+}
+
+// LÄGG I KUNDVAGN UPPTADERA UI
+function addToCart(e) {
+  const index = e.currentTarget.dataset.id;
+  pastry[index].amount += 1;
+  printPastry();
+  updatePastryInStorage();
+}
+
+// HÄMTA BAKVERK UR LOCAL STORAGE OM DET FINNS
+const storedPastry = localStorage.getItem('pastryList');
+if (storedPastry) {
+  pastry = JSON.parse(storedPastry);
+  printPastry();
+}
+
+// HÄMTA KUNDVAGN FRÅN LOCAL STORAGE OM DET FINNS
+const storedCartItems = localStorage.getItem('cartItems');
+if (storedCartItems) {
+  printCartpastry();
+}
+
+// ------------------------------------------------------------------------------------------
+// ------------------------------------ Kundvagn & beställning ------------------------------
+// ------------------------------------------------------------------------------------------
+
+let invoicePaymentSelected = false;
+
+// VALIDERING AV FÄLT
+inputFields.forEach((field) => {
+  field.addEventListener('keyup', validateFormField);
+  field.addEventListener('focusout', validateFormField);
+});
+
+// ÄNDRA BETALNING
+paymentOptions.forEach((radio) => {
+  radio.addEventListener('change', togglePaymentOptions);
+});
+
+// VÄXLING AV BETALNING
+function togglePaymentOptions(e) {
+  const selectedOption = e.currentTarget.value;
+  invoicePaymentSelected = selectedOption === 'invoice';
+  toggleDetailsVisibility();
+}
+
+// UPPDATERA BETALNINGSALTERNATIV
+function toggleDetailsVisibility() {
+  invoiceDetails.classList.toggle('hidden', !invoicePaymentSelected);
+  creditCardDetails.classList.toggle('hidden', invoicePaymentSelected);
+}
+
+// VALIDERA FÄLT
+function validateFormField() {
+  let hasErrors = false;
+
+  inputFields.forEach((field) => {
+    const errorField = field.previousElementSibling;
+    let errorMsg = '';
+
+    if (errorField !== null) {
+      errorField.innerHTML = '';
+    }
+
+    // VALIDERING AV OLIKA FÄLT
+    switch (field.id) {
+      case 'zipcode':
+        if (field.value.length != 5) {
+          errorMsg = 'Fältet är ej korrekt ifylld!';
+          hasErrors = true;
+        }
+        break;
+      case 'firstName':
+      case 'lastName':
+      case 'street':
+      case 'city':
+      case 'mobile':
+      case 'email':
+        if (field.value.length === 0) {
+          errorMsg = 'Fältet är ej korrekt ifylld!';
+          hasErrors = true;
+        }
+        break;
+      case 'ssn':
+        const regex = new RegExp(
+          /^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$/,
+        );
+        if (regex.exec(field.value) === null) {
+          errorMsg = 'Felaktig Organisationsnummer/Personnummer!';
+          hasErrors = true;
+        }
+        break;
+    }
+
+    if (errorField !== null) {
+      errorField.innerHTML = errorMsg;
+    }
+  });
+
+  // VALIDERING AV SKICKA-KNAPP
+  orderBtn.disabled = hasErrors;
+  if (hasErrors) {
+    orderBtn.removeEventListener('click', sendForm);
+  } else {
+    orderBtn.addEventListener('click', sendForm);
+  }
+}
+
+// POPUP ORDER SUMMERING
+function showOrderSummary() {
+  const orderSummary = document.querySelector('#orderSummary');
+  orderSummary.innerHTML = '';
+
+  const closeButton = document.createElement('button');
+  closeButton.id = 'closePopup';
+  closeButton.textContent = 'Stäng fönstret';
+
+  const thankYouMessage = document.createElement('p');
+  thankYouMessage.textContent = 'Tack för din beställning! Den har nu skickats och är på väg till dig.';
+
+  const divider = document.createElement('div');
+  divider.classList.add('divider');
+
+  orderSummary.appendChild(closeButton);
+  orderSummary.appendChild(thankYouMessage);
+  orderSummary.appendChild(divider);
+
+  const orderList = document.createElement('ul');
+
+  pastry.forEach((pastryItem) => {
+    if (pastryItem.amount > 0) {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${pastryItem.amount} st ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr`;
+      orderList.appendChild(listItem);
+    }
+  });
+
+  orderSummary.appendChild(orderList);
+
+  let totalSum = 0;
+  pastry.forEach((pastryItem) => {
+    if (pastryItem.amount > 0) {
+      totalSum += pastryItem.amount * pastryItem.price;
+    }
+  });
+
+  const totalListItem = document.createElement('li');
+  totalListItem.textContent = `Totalsumma: ${totalSum} kr`;
+  totalListItem.classList.add('total-sum-style');
+  orderList.appendChild(totalListItem);
+
+  orderSummary.classList.remove('hidden');
+  closeButton.addEventListener('click', hideOrderConfirmation);
+}
+
+// SKICKA FORMULÄR
+function sendForm() {
+  popup.classList.remove('hidden');
+  showOrderSummary();
+  popup.addEventListener('click', hideOrderConfirmation);
+  document.querySelector('#closePopup').addEventListener('click', hideOrderConfirmation);
+}
+
+// ÅTERSTÄLL FORMULÄR
+function resetFormFields() {
+  inputFields.forEach(field => {
+    field.value = '';
+  });
+
+  document.querySelectorAll('.errorField').forEach(field => {
+    field.textContent = ''; 
+  });
+
+  hideOrderConfirmation();
+}
+
+// GÖM POPUP ORDER
+function hideOrderConfirmation() {
+  popup.classList.add('hidden');
+  orderSummary.classList.add('hidden');
+  popup.removeEventListener('click', hideOrderConfirmation);
+  document.querySelector('#closePopup').removeEventListener('click', hideOrderConfirmation);
+}
+
+// EVENTLYSSNARE
 searchIcon.addEventListener('click', showSearch);
 filterIcon.addEventListener('click', showFilter);
 sortIcon.addEventListener('click', showSort);
+sortByPriceBtn.addEventListener('click', sortByPrice);
+sortByRatingBtn.addEventListener('click', sortByRating);
+sortByLetterBtn.addEventListener('click', sortByLetter);
+searchItemInput.addEventListener('input', searchItem);
+filterBreadBtn.addEventListener('click', filterBread);
+filterBunBtn.addEventListener('click', filterBun);
+filterCakeBtn.addEventListener('click', filterCake);
+resetButton.addEventListener('click', resetFormFields);
+minusBtn.addEventListener('click', () => decreaseAmount(index));
+plusBtn.addEventListener('click', () => increaseAmount(index));
+plusBtn.addEventListener('click', () => addToCart(index));
