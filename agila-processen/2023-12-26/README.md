@@ -22,13 +22,13 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag** 
+**Idag har jag** skapat en separat sida som heter order.html och innehåller kundkorgen och formuläret.
 
-**Ett problem jag har** 
+**Ett problem jag har** var att när jag skulle flytta formuläret följde en bit kod med som inte tillhörde formuläret. Det tog lång tid att felsöka varför andra funktioner på index.html slutade fungera bara för att jag tagit bort formuläret. 
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med** att förstå hur andra tänker när de skriver kod och hur de avgränsar sina områden.
 
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig** att det är viktigt att skriva kod i rätt ordning och tydligt för att man ska kunna se och avgränsa vilken kod som hör till vilka funktioner.
 
 ## Namn: Nataliya Lisjö
 
