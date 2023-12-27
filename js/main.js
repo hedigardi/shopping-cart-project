@@ -1,5 +1,3 @@
-import { createItemPastry } from './function.js';
-
 // HÄMTA HTML ELEMENT
 const pastryHtmlContainer = document.querySelector('#pastryContainer');
 const cartHtmlContainer = document.querySelector('#cart');
@@ -25,13 +23,15 @@ const divSearch = document.querySelector('.search-center');
 const divFilter = document.querySelector('.filter-center');
 const divSort = document.querySelector('.sort-center');
 const itemFunctionContainer = document.querySelector('.item-function-container',);
-const minusBtn=document.querySelector('.minus',);
-const plusBtn=document.querySelector('.plus',);
+
 // IMPORTERA PRODUKTER TILL MAIN.JS
 import pastryList from './products.js';
 
 // BAKVERK
 let pastry = pastryList;
+
+// IMPORTERA FUNKTION TILL MAIN.JS
+import { createItemPastry } from './function.js';
 
 // SORTERING
 function sortByPrice() {
@@ -118,11 +118,14 @@ function decreaseAmount(e) {
   updatePastryInStorage();
 }
 
-function increaseAmount(e) {
-  const index = e.currentTarget.dataset.id;
+function increaseAmount(e, index) {
+  addToCartAndUpdate(e, index);
+}
+
+function addToCartAndUpdate(e, index) {
   pastry[index].amount += 1;
-  printPastry();
   updatePastryInStorage();
+  printPastry();
 }
 
 // TÖM KUNDVAGN
@@ -143,41 +146,6 @@ function printPastry() {
     const { name, images, price, rating, amount } = pastryItem;
 
     createItemPastry(name, images, price, rating, amount, index);
-    // const article = document.createElement('article');
-    // const h3 = document.createElement('h3');
-    // const img = document.createElement('img');
-    // const priceDiv = document.createElement('div');
-    // const ratingDiv = document.createElement('div');
-    // const amountDiv = document.createElement('div');
-    // const minusBtn = document.createElement('button');
-    // const plusBtn = document.createElement('button');
-
-    // h3.textContent = name;
-    // img.src = images[0].src;
-    // img.alt = images[0].alt;
-    // priceDiv.innerHTML = `Price: <span>${price}</span> kr`;
-    // ratingDiv.innerHTML = `Rating: <span>${rating}</span>`;
-    // amountDiv.innerHTML = `Amount: <span>${amount}</span>`;
-    // minusBtn.textContent = '-';
-    // minusBtn.classList.add('minus');
-    // minusBtn.dataset.id = index;
-    // plusBtn.textContent = '+';
-    // plusBtn.classList.add('plus');
-    // plusBtn.dataset.id = index;
-
-    // minusBtn.addEventListener('click', () => decreaseAmount(e));
-    // plusBtn.addEventListener('click', () => increaseAmount(e));
-    // plusBtn.addEventListener('click', () => addToCart(e));
-
-    // article.appendChild(h3);
-    // article.appendChild(img);
-    // article.appendChild(priceDiv);
-    // article.appendChild(ratingDiv);
-    // article.appendChild(amountDiv);
-    // article.appendChild(minusBtn);
-    // article.appendChild(plusBtn);
-
-    // pastryHtmlContainer.appendChild(article);
   });
 
   const minusBtns = pastryHtmlContainer.querySelectorAll('button.minus');
@@ -187,9 +155,8 @@ function printPastry() {
     btn.addEventListener('click', decreaseAmount);
   });
 
-  plusBtns.forEach((btn) => {
-    btn.addEventListener('click', increaseAmount);
-    btn.addEventListener('click', addToCart);
+  plusBtns.forEach((btn, index) => {
+    btn.addEventListener('click', (e) => increaseAmount(e, index));
   });
 
   printCartpastry();
@@ -289,11 +256,10 @@ function updatePastryInStorage() {
 }
 
 // LÄGG I KUNDVAGN UPPTADERA UI
-function addToCart(e) {
-  const index = e.currentTarget.dataset.id;
+function addToCart(e, index) {
   pastry[index].amount += 1;
-  printPastry();
   updatePastryInStorage();
+  printPastry();
 }
 
 // HÄMTA BAKVERK UR LOCAL STORAGE OM DET FINNS
@@ -486,7 +452,7 @@ searchItemInput.addEventListener('input', searchItem);
 filterBreadBtn.addEventListener('click', filterBread);
 filterBunBtn.addEventListener('click', filterBun);
 filterCakeBtn.addEventListener('click', filterCake);
-// resetButton.addEventListener('click', resetFormFields);
-// plusBtn.addEventListener('click', () => increaseAmount(e));
-// minusBtn.addEventListener('click', () => decreaseAmount(e));
-// plusBtn.addEventListener('click', () => addToCart(e));
+
+if (resetButton) {
+  resetButton.addEventListener('click', resetFormFields);
+}
