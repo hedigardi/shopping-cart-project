@@ -22,13 +22,13 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag** arbetat med beställningsformulär.
 
-**Ett problem jag har**
+**Ett problem jag har** är att refaktorera kod så att det blir lättläst och utan så mycket upprepningar.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att förstå argumentet ”e” i en funktion. 
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** att man kan ange ett valfritt attribut och värde med querySelector om man anger det inom [] för att få tag på ett HTML-element.
 
 ## Namn: Nataliya Lisjö
 
