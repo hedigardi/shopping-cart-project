@@ -68,7 +68,7 @@ const searchItem = (e) => {
   });
 };
 
-// FILTRERING
+// FILTRER
 const filterBread = () => {
   const filterItems = document.querySelectorAll('article h3');
 
