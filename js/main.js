@@ -500,9 +500,11 @@ function hideOrderConfirmation() {
   popup.classList.add('hidden');
   orderSummary.classList.add('hidden');
   popup.removeEventListener('click', hideOrderConfirmation);
-  document
-    .querySelector('#closePopup')
-    .removeEventListener('click', hideOrderConfirmation);
+  document.querySelector('#closePopup');
+  document.removeEventListener('click', hideOrderConfirmation);
+  clearCart();
+  resetFormFields();
+  return;
 }
 
 window.onload = function () {
@@ -520,7 +522,7 @@ searchItemInput.addEventListener('input', searchItem);
 filterBreadBtn.addEventListener('click', filterBread);
 filterBunBtn.addEventListener('click', filterBun);
 filterCakeBtn.addEventListener('click', filterCake);
-// resetButton.addEventListener('click', resetFormFields);
+resetButton.addEventListener('click', resetFormFields);
 // plusBtn.addEventListener('click', () => increaseAmount(e));
 // minusBtn.addEventListener('click', () => decreaseAmount(e));
 // plusBtn.addEventListener('click', () => addToCart(e));
