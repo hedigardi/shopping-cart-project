@@ -32,10 +32,10 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag**  tittade Michael lection arbeta med local storage och labbat med det
 
-**Ett problem jag har**
+**Ett problem jag har** glömt att lägga till return $nån , sökte fell 
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med**  hittade fell 
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig**   local storage functionalitet , add, get , list ut vad har gott
