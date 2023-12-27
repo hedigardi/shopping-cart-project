@@ -32,10 +32,10 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag**   Sökte bugs i coden , skapade kund-korg in Order.html genom att hämta saker from local storage 
 
-**Ett problem jag har**
+**Ett problem jag har** addEventListener() klagade i console hela tiden , flytade de in functioner 
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med**   Sökte bugs i coden  -- det är problematisk , dåmåste man förstå allla variable , funktioner och kooplingar mellan dem
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig**   addEventListener() --beteende ,  hur man arbetar med localStorage 
