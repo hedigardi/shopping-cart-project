@@ -465,6 +465,10 @@ function hideOrderConfirmation() {
   document.querySelector('#closePopup').removeEventListener('click', hideOrderConfirmation);
 }
 
+window.onload = function() {
+  printPastry();
+};
+
 // EVENTLYSSNARE
 searchIcon.addEventListener('click', showSearch);
 filterIcon.addEventListener('click', showFilter);
