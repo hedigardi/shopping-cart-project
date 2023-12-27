@@ -13,7 +13,9 @@ const filterCakeBtn = document.querySelector('#filterCake');
 const invoiceDetails = document.querySelector('#invoiceDetails');
 const creditCardDetails = document.querySelector('#creditCardDetails');
 const paymentOptions = document.querySelectorAll('[name="paymentOption"]');
-const inputFields = document.querySelectorAll('form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])',);
+const inputFields = document.querySelectorAll(
+  'form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])'
+);
 const popup = document.querySelector('#popup');
 const orderSummary = document.querySelector('#orderSummary');
 const orderBtn = document.querySelector('#sendForm');
@@ -24,9 +26,11 @@ const sortIcon = document.querySelector('#sort-icon');
 const divSearch = document.querySelector('.search-center');
 const divFilter = document.querySelector('.filter-center');
 const divSort = document.querySelector('.sort-center');
-const itemFunctionContainer = document.querySelector('.item-function-container',);
-const minusBtn=document.querySelector('.minus',);
-const plusBtn=document.querySelector('.plus',);
+const itemFunctionContainer = document.querySelector(
+  '.item-function-container'
+);
+const minusBtn = document.querySelector('.minus');
+const plusBtn = document.querySelector('.plus');
 // IMPORTERA PRODUKTER TILL MAIN.JS
 import pastryList from './products.js';
 
@@ -66,30 +70,49 @@ const searchItem = (e) => {
 
 // FILTRERING
 const filterBread = () => {
-  filterPastry('Bread');
+  const filterItems = document.querySelectorAll('article h3');
+
+  filterItems.forEach((items) => {
+    const filterName = items.firstChild.textContent;
+
+    if (filterName.indexOf('röd') !== -1) {
+      items.parentElement.style.display = 'revert';
+    } else {
+      items.parentElement.style.display = 'none';
+    }
+  });
 };
 
 const filterBun = () => {
-  filterPastry('Bun');
+  const filterItems = document.querySelectorAll('article h3');
+
+  filterItems.forEach((items) => {
+    const filterName = items.firstChild.textContent;
+
+    if (
+      filterName.indexOf('ulle') !== -1 ||
+      filterName.indexOf('rois') !== -1
+    ) {
+      items.parentElement.style.display = 'revert';
+    } else {
+      items.parentElement.style.display = 'none';
+    }
+  });
 };
 
 const filterCake = () => {
-  filterPastry('Cake');
-};
-
-function filterPastry(filterName) {
   const filterItems = document.querySelectorAll('article h3');
 
-  filterItems.forEach((item) => {
-    const itemName = item.firstChild.textContent;
+  filterItems.forEach((items) => {
+    const filterName = items.firstChild.textContent;
 
-    if (itemName.indexOf(filterName) !== -1) {
-      item.parentElement.style.display = '';
+    if (filterName.indexOf('årta') !== -1) {
+      items.parentElement.style.display = 'revert';
     } else {
-      item.parentElement.style.display = 'none';
+      items.parentElement.style.display = 'none';
     }
   });
-}
+};
 
 const showSearch = () => {
   itemFunctionContainer.classList.add('left');
@@ -207,7 +230,9 @@ function printCartpastry() {
 
       const article = document.createElement('article');
       const span = document.createElement('span');
-      span.textContent = `${pastryItem.amount}st ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr`;
+      span.textContent = `${pastryItem.amount}st ${pastryItem.name} - ${
+        pastryItem.amount * pastryItem.price
+      } kr`;
       article.appendChild(span);
       cartContent.appendChild(article);
     }
@@ -264,7 +289,9 @@ function printOrderSummary() {
       const article = document.createElement('article');
       const span = document.createElement('span');
 
-      span.textContent = `${pastryItem.amount}pcs ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr`;
+      span.textContent = `${pastryItem.amount}pcs ${pastryItem.name} - ${
+        pastryItem.amount * pastryItem.price
+      } kr`;
 
       article.appendChild(span);
       orderSummary.appendChild(article);
@@ -273,7 +300,7 @@ function printOrderSummary() {
 
   const totalAmount = pastry.reduce(
     (acc, pastryItem) => acc + pastryItem.price * pastryItem.amount,
-    0,
+    0
   );
 
   // LAGRING AV BAKVERK I LOCAL STORAGE
@@ -372,7 +399,7 @@ function validateFormField() {
         break;
       case 'ssn':
         const regex = new RegExp(
-          /^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$/,
+          /^(19|20)?(\d{6}([-+]|\s)\d{4}|(?!19|20)\d{10})$/
         );
         if (regex.exec(field.value) === null) {
           errorMsg = 'Felaktig Organisationsnummer/Personnummer!';
@@ -405,7 +432,8 @@ function showOrderSummary() {
   closeButton.textContent = 'Stäng fönstret';
 
   const thankYouMessage = document.createElement('p');
-  thankYouMessage.textContent = 'Tack för din beställning! Den har nu skickats och är på väg till dig.';
+  thankYouMessage.textContent =
+    'Tack för din beställning! Den har nu skickats och är på väg till dig.';
 
   const divider = document.createElement('div');
   divider.classList.add('divider');
@@ -419,7 +447,9 @@ function showOrderSummary() {
   pastry.forEach((pastryItem) => {
     if (pastryItem.amount > 0) {
       const listItem = document.createElement('li');
-      listItem.textContent = `${pastryItem.amount} st ${pastryItem.name} - ${pastryItem.amount * pastryItem.price} kr`;
+      listItem.textContent = `${pastryItem.amount} st ${pastryItem.name} - ${
+        pastryItem.amount * pastryItem.price
+      } kr`;
       orderList.appendChild(listItem);
     }
   });
@@ -447,17 +477,19 @@ function sendForm() {
   popup.classList.remove('hidden');
   showOrderSummary();
   popup.addEventListener('click', hideOrderConfirmation);
-  document.querySelector('#closePopup').addEventListener('click', hideOrderConfirmation);
+  document
+    .querySelector('#closePopup')
+    .addEventListener('click', hideOrderConfirmation);
 }
 
 // ÅTERSTÄLL FORMULÄR
 function resetFormFields() {
-  inputFields.forEach(field => {
+  inputFields.forEach((field) => {
     field.value = '';
   });
 
-  document.querySelectorAll('.errorField').forEach(field => {
-    field.textContent = ''; 
+  document.querySelectorAll('.errorField').forEach((field) => {
+    field.textContent = '';
   });
 
   hideOrderConfirmation();
@@ -468,10 +500,12 @@ function hideOrderConfirmation() {
   popup.classList.add('hidden');
   orderSummary.classList.add('hidden');
   popup.removeEventListener('click', hideOrderConfirmation);
-  document.querySelector('#closePopup').removeEventListener('click', hideOrderConfirmation);
+  document
+    .querySelector('#closePopup')
+    .removeEventListener('click', hideOrderConfirmation);
 }
 
-window.onload = function() {
+window.onload = function () {
   printPastry();
 };
 
