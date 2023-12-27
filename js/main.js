@@ -1,3 +1,5 @@
+import { createItemPastry } from './function.js';
+
 // HÄMTA HTML ELEMENT
 const pastryHtmlContainer = document.querySelector('#pastryContainer');
 const cartHtmlContainer = document.querySelector('#cart');
@@ -23,7 +25,8 @@ const divSearch = document.querySelector('.search-center');
 const divFilter = document.querySelector('.filter-center');
 const divSort = document.querySelector('.sort-center');
 const itemFunctionContainer = document.querySelector('.item-function-container',);
-
+const minusBtn=document.querySelector('.minus',);
+const plusBtn=document.querySelector('.plus',);
 // IMPORTERA PRODUKTER TILL MAIN.JS
 import pastryList from './products.js';
 
@@ -108,13 +111,15 @@ const showSort = () => {
 };
 
 // ÄNDRA ANTAL VAROR
-function decreaseAmount(index) {
+function decreaseAmount(e) {
+  const index = e.currentTarget.dataset.id;
   pastry[index].amount = Math.max(0, pastry[index].amount - 1);
   printPastry();
   updatePastryInStorage();
 }
 
-function increaseAmount(index) {
+function increaseAmount(e) {
+  const index = e.currentTarget.dataset.id;
   pastry[index].amount += 1;
   printPastry();
   updatePastryInStorage();
@@ -137,53 +142,54 @@ function printPastry() {
   pastry.forEach((pastryItem, index) => {
     const { name, images, price, rating, amount } = pastryItem;
 
-    const article = document.createElement('article');
-    const h3 = document.createElement('h3');
-    const img = document.createElement('img');
-    const priceDiv = document.createElement('div');
-    const ratingDiv = document.createElement('div');
-    const amountDiv = document.createElement('div');
-    const minusBtn = document.createElement('button');
-    const plusBtn = document.createElement('button');
+    createItemPastry(name, images, price, rating, amount, index);
+    // const article = document.createElement('article');
+    // const h3 = document.createElement('h3');
+    // const img = document.createElement('img');
+    // const priceDiv = document.createElement('div');
+    // const ratingDiv = document.createElement('div');
+    // const amountDiv = document.createElement('div');
+    // const minusBtn = document.createElement('button');
+    // const plusBtn = document.createElement('button');
 
-    h3.textContent = name;
-    img.src = images[0].src;
-    img.alt = images[0].alt;
-    priceDiv.innerHTML = `Price: <span>${price}</span> kr`;
-    ratingDiv.innerHTML = `Rating: <span>${rating}</span>`;
-    amountDiv.innerHTML = `Amount: <span>${amount}</span>`;
-    minusBtn.textContent = '-';
-    minusBtn.classList.add('minus');
-    minusBtn.dataset.id = index;
-    plusBtn.textContent = '+';
-    plusBtn.classList.add('plus');
-    plusBtn.dataset.id = index;
+    // h3.textContent = name;
+    // img.src = images[0].src;
+    // img.alt = images[0].alt;
+    // priceDiv.innerHTML = `Price: <span>${price}</span> kr`;
+    // ratingDiv.innerHTML = `Rating: <span>${rating}</span>`;
+    // amountDiv.innerHTML = `Amount: <span>${amount}</span>`;
+    // minusBtn.textContent = '-';
+    // minusBtn.classList.add('minus');
+    // minusBtn.dataset.id = index;
+    // plusBtn.textContent = '+';
+    // plusBtn.classList.add('plus');
+    // plusBtn.dataset.id = index;
 
-    minusBtn.addEventListener('click', () => decreaseAmount(index));
-    plusBtn.addEventListener('click', () => increaseAmount(index));
-    plusBtn.addEventListener('click', () => addToCart(index));
+    // minusBtn.addEventListener('click', () => decreaseAmount(e));
+    // plusBtn.addEventListener('click', () => increaseAmount(e));
+    // plusBtn.addEventListener('click', () => addToCart(e));
 
-    article.appendChild(h3);
-    article.appendChild(img);
-    article.appendChild(priceDiv);
-    article.appendChild(ratingDiv);
-    article.appendChild(amountDiv);
-    article.appendChild(minusBtn);
-    article.appendChild(plusBtn);
+    // article.appendChild(h3);
+    // article.appendChild(img);
+    // article.appendChild(priceDiv);
+    // article.appendChild(ratingDiv);
+    // article.appendChild(amountDiv);
+    // article.appendChild(minusBtn);
+    // article.appendChild(plusBtn);
 
-    pastryHtmlContainer.appendChild(article);
+    // pastryHtmlContainer.appendChild(article);
   });
 
   const minusBtns = pastryHtmlContainer.querySelectorAll('button.minus');
   const plusBtns = pastryHtmlContainer.querySelectorAll('button.plus');
 
   minusBtns.forEach((btn) => {
-    btn.addEventListener('click', () => decreaseAmount(btn.dataset.id));
+    btn.addEventListener('click', decreaseAmount);
   });
 
   plusBtns.forEach((btn) => {
-    btn.addEventListener('click', () => increaseAmount(btn.dataset.id));
-    btn.addEventListener('click', () => addToCart(btn.dataset.id));
+    btn.addEventListener('click', increaseAmount);
+    btn.addEventListener('click', addToCart);
   });
 
   printCartpastry();
@@ -480,7 +486,7 @@ searchItemInput.addEventListener('input', searchItem);
 filterBreadBtn.addEventListener('click', filterBread);
 filterBunBtn.addEventListener('click', filterBun);
 filterCakeBtn.addEventListener('click', filterCake);
-resetButton.addEventListener('click', resetFormFields);
-minusBtn.addEventListener('click', () => decreaseAmount(index));
-plusBtn.addEventListener('click', () => increaseAmount(index));
-plusBtn.addEventListener('click', () => addToCart(index));
+// resetButton.addEventListener('click', resetFormFields);
+// plusBtn.addEventListener('click', () => increaseAmount(e));
+// minusBtn.addEventListener('click', () => decreaseAmount(e));
+// plusBtn.addEventListener('click', () => addToCart(e));
