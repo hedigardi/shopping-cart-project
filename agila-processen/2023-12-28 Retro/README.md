@@ -22,7 +22,7 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag**  
 
 **Ett problem jag har**
 
@@ -32,10 +32,10 @@
 
 ## Namn: Nataliya Lisjö
 
-**Idag har jag**
+**Idag har jag** tittade Michael lection om LocalStorage  ---- delete all, delete 1 item och provat implementare in våran project
 
-**Ett problem jag har**
+**Ett problem jag har**      delete 1 item --- kan inte hitta rätt plats att lägga till eller unropa funktioner . Uppdatera sidan när 1 item deleted 
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med**   delete 1 item --- kan inte hitta rätt plats , förstörade allt som gjörde forre 
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig**    local storage ändringar 
