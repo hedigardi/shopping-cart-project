@@ -11,9 +11,7 @@ const filterCakeBtn = document.querySelector('#filterCake');
 const invoiceDetails = document.querySelector('#invoiceDetails');
 const creditCardDetails = document.querySelector('#creditCardDetails');
 const paymentOptions = document.querySelectorAll('[name="paymentOption"]');
-const inputFields = document.querySelectorAll(
-  'form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])'
-);
+const inputFields = document.querySelectorAll('form input:not([type="checkbox"]):not([type="radio"]):not([type="button"])');
 const popup = document.querySelector('#popup');
 const orderSummary = document.querySelector('#orderSummary');
 const orderBtn = document.querySelector('#sendForm');
@@ -24,9 +22,7 @@ const sortIcon = document.querySelector('#sort-icon');
 const divSearch = document.querySelector('.search-center');
 const divFilter = document.querySelector('.filter-center');
 const divSort = document.querySelector('.sort-center');
-const itemFunctionContainer = document.querySelector(
-  '.item-function-container'
-);
+const itemFunctionContainer = document.querySelector('.item-function-container');
 
 // IMPORTERA PRODUKTER TILL MAIN.JS
 import pastryList from './products.js';
@@ -68,7 +64,7 @@ const searchItem = (e) => {
   });
 };
 
-// FILTRER
+// FILTRERING
 const filterBread = () => {
   const filterItems = document.querySelectorAll('article h3');
 
@@ -185,7 +181,7 @@ function printPastry() {
   printCartpastry();
 }
 
-// KUNDVAGN
+// PRINT KUNDVAGN
 function printCartpastry() {
   cartHtmlContainer.innerHTML = '';
   let sum = 0;
@@ -332,7 +328,7 @@ function toggleDetailsVisibility() {
   creditCardDetails.classList.toggle('hidden', invoicePaymentSelected);
 }
 
-// VALIDERA FÄLT
+// VALIDERA FORMULÄR
 function validateFormField() {
   let hasErrors = false;
 
@@ -469,10 +465,6 @@ function hideOrderConfirmation() {
     .removeEventListener('click', hideOrderConfirmation);
 }
 
-window.onload = function () {
-  printPastry();
-};
-
 // EVENTLYSSNARE
 searchIcon.addEventListener('click', showSearch);
 filterIcon.addEventListener('click', showFilter);
@@ -484,6 +476,10 @@ searchItemInput.addEventListener('input', searchItem);
 filterBreadBtn.addEventListener('click', filterBread);
 filterBunBtn.addEventListener('click', filterBun);
 filterCakeBtn.addEventListener('click', filterCake);
+
+window.onload = function () {
+  printPastry();
+};
 
 if (resetButton) {
   resetButton.addEventListener('click', resetFormFields);

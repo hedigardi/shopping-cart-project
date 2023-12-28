@@ -1,4 +1,3 @@
-
 export function createItemPastry(name, images, price, rating, amount, index) {
 
     const article = document.createElement('article')
