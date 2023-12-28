@@ -2,13 +2,13 @@
 
 ## Namn: Hedi Gardi
 
-**Idag har jag**
+**Idag har jag** jobbat med att hitta och fixa en bugg som gjorde att JavaScript-koden fungerade på vissa webbläsare.
 
-**Ett problem jag har**
+**Ett problem jag har** är att jag inte får till så att när man klickar på skicka beställning så ska både kundvagnen och beställningsförmuläret nollställas.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** förstå hur jag ska tänka med nestlade funktionerna för att få till det här med nollställningen på kundvagn och formuläret.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** hur man ska gå tillvägga när man ska hitta en bugg och evetuellt fixa den.
 
 ## Namn: Sanjin Đumišić
 
