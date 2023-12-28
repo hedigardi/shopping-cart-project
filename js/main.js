@@ -457,8 +457,6 @@ function resetFormFields() {
   document.querySelectorAll('.errorField').forEach((field) => {
     field.textContent = '';
   });
-
-  hideOrderConfirmation();
 }
 
 // GÖM POPUP ORDER
