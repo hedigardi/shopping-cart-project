@@ -12,13 +12,13 @@
 
 ## Namn: Sanjin Đumišić
 
-**Idag har jag** 
+**Idag har jag** gjort så att local storage sparar produkterna i kundkorgen vid klick till order.html. Detsamma med att kunna tömma kundvagnen på order.html.
 
-**Ett problem jag har** 
+**Ett problem jag har** är att få till en dynamisk funktion i efterhand när koden blivit "plenty".
 
-**Jag behöver hjälp med** 
+**Jag behöver hjälp med** att veta vad som egentligen är best-practice, så att inte det blir för mycket kod.
 
-**Idag har jag lärt mig** 
+**Idag har jag lärt mig** att på befintlig sida lägga till localStorage.
 
 ## Namn: Rasmus Wersäll
 
