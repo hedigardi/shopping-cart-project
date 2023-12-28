@@ -22,13 +22,13 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**
+**Idag har jag** arbetat med att titta testa alla funktioner på webbsidan och se över om det är något som behöver fixas utseendemässigt eller funktionsmässigt.
 
-**Ett problem jag har**
+**Ett problem jag har** är att formuläret hade en bug som gjorde att det inte gick att nollställa. När man tryckte på lägg till så lades det till 2 saker istället för 1 så det behöver fixas.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att lära mig alla funktioner som jag inte haft i uppgift att göra i detta projekt.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** mer om felsökning av funktioner och buggar.
 
 ## Namn: Nataliya Lisjö
 
