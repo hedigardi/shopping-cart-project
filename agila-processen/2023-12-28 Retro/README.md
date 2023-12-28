@@ -12,13 +12,13 @@
 
 ## Namn: Sanjin Đumišić
 
-**Idag har jag**
+**Idag har jag** tittat på koden och testat att börja bygga upp den i ett annat projekt från scratch, för att repetera...
 
-**Ett problem jag har**
+**Ett problem jag har** är att bygga upp en dynamisk sida och göra det i separata funktioner.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att kunna bygga upp en dynamisk sajt i avdelade funktioner.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** hur man avslutar ett Agilt projekt.
 
 ## Namn: Rasmus Wersäll
 
