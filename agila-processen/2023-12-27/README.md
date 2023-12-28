@@ -12,13 +12,13 @@
 
 ## Namn: Sanjin Đumišić
 
-**Idag har jag**
+**Idag har jag** Felsökt efter att butiken kraschade.
 
-**Ett problem jag har**
+**Ett problem jag har** att framöver fördela koden i olika .js filer och anropa dessa. Sen vet jag inte om felsökningen blir lättare eller svårare med fler filer.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att efter detta ggöra en ny butik igen och repetera strukturen och öva på koden så att man gör detsamma fast på nytt på en gång... för att koden och strukturen ska sätta sig.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** vid felsökning att ibland sidan inte laddas ordentligen. Då måste man skriva in en "load" kod för at fixa det.
 
 ## Namn: Rasmus Wersäll
 
