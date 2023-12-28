@@ -22,13 +22,13 @@
 
 ## Namn: Rasmus Wersäll
 
-**Idag har jag**  
+**Idag har jag** rundat av grupparbetet gjort vårt sista retro med gruppen.
 
-**Ett problem jag har**
+**Ett problem jag har** alla problem är nu lösta! 😊
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** att komma på en idé för mitt nästa projekt där jag kan förstärka det jag lärt mig under grupparbetet.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** ett sätt att öppna en länk i ett nytt webbläsarfönster med hjälp av javascript.
 
 ## Namn: Nataliya Lisjö
 
