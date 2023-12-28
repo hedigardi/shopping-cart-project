@@ -2,13 +2,13 @@
 
 ## Namn: Hedi Gardi
 
-**Idag har jag**
+**Idag har jag** jobbat med att lösa buggen där dubbla produkter las till kundvagnen istället för 1st. Dessutom har vi kört vår sista retro för projektet med gruppen.
 
-**Ett problem jag har**
+**Ett problem jag har** är att jag inte fick till nollställningen på kundvagnen och formuläret när man skickade iväg beställningen.
 
-**Jag behöver hjälp med**
+**Jag behöver hjälp med** med att förstå hur man ska tänka med de nestlade funktionerna för att få till en lösning på problemet ovan.
 
-**Idag har jag lärt mig**
+**Idag har jag lärt mig** hur man navigerar fram till att lösa en bugg.
 
 ## Namn: Sanjin Đumišić
 
